@@ -33,7 +33,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -46,8 +53,59 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GUI\PantallaCarga.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PantallaCarga.Designer.cs">
+      <DependentUpon>PantallaCarga.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ProductoUI\AltaProductoUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ProductoUI\AltaProductoUI.Designer.cs">
+      <DependentUpon>AltaProductoUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ProductoUI\CompraVentaProductoUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ProductoUI\CompraVentaProductoUI.Designer.cs">
+      <DependentUpon>CompraVentaProductoUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ProductoUI\InventarioProductoUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ProductoUI\InventarioProductoUI.Designer.cs">
+      <DependentUpon>InventarioProductoUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\SocioUI\AltaSocioUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\SocioUI\AltaSocioUI.Designer.cs">
+      <DependentUpon>AltaSocioUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\SocioUI\BaseBuscarUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\SocioUI\BaseBuscarUI.Designer.cs">
+      <DependentUpon>BaseBuscarUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\SocioUI\BaseUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\SocioUI\BaseUI.Designer.cs">
+      <DependentUpon>BaseUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ProbandoFormularioPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ProbandoFormularioPrincipal.Designer.cs">
+      <DependentUpon>ProbandoFormularioPrincipal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\SocioUI\BaseUI.resx">
+      <DependentUpon>BaseUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -57,6 +115,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -71,10 +130,19 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CapaBaseDatos\CapaDatos.csproj">
+      <Project>{c4591f48-6a22-4e39-bd8c-33a4634c0562}</Project>
+      <Name>CapaDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CapaDominio\CapaDominio.csproj">
+      <Project>{03e84a1e-93fb-479e-870e-a6674938b142}</Project>
+      <Name>CapaDominio</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CapaNegocio\CapaNegocio.csproj">
       <Project>{15c2bb49-dd11-4a9e-b038-b7dd2ba9364e}</Project>
       <Name>CapaNegocio</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

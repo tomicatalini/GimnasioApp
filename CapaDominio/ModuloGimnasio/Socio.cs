@@ -99,4 +99,4 @@ namespace CapaDominio.ModuloGimnasio
         }
     }
 }
-}
+

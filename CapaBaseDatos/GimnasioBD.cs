@@ -1,6 +1,7 @@
 ﻿using System.Data.Entity;
 using CapaDominio.ModuloComercio;
 using CapaDominio.ModuloGimnasio;
+using CapaBaseDatos.MapeoBD;
 
 namespace CapaBaseDatos
 {
