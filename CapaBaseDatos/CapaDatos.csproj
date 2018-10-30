@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>c4591f48-6a22-4e39-bd8c-33a4634c0562</ProjectGuid>
+    <ProjectGuid>{C4591F48-6A22-4E39-BD8C-33A4634C0562}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CapaBaseDatos</RootNamespace>
@@ -31,24 +31,81 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System"/>
-    
-    <Reference Include="System.Core"/>
-    <Reference Include="System.Xml.Linq"/>
-    <Reference Include="System.Data.DataSetExtensions"/>
-    
-    
-    <Reference Include="Microsoft.CSharp"/>
-    
-    <Reference Include="System.Data"/>
-    
-    <Reference Include="System.Net.Http"/>
-    
-    <Reference Include="System.Xml"/>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServerCompact, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.SqlServerCompact.6.0.0\lib\net40\EntityFramework.SqlServerCompact.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Compact.4.0.8854.1\lib\net40\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SqlServerCe.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Compact.4.0.8854.1\lib\net40\System.Data.SqlServerCe.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="DTO\ProductoDTO.cs" />
+    <Compile Include="GimnasioBD.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositorios\CuotaRepository.cs" />
+    <Compile Include="Repositorios\EjercicioRepository.cs" />
+    <Compile Include="Repositorios\GastoAdministrativoRepository.cs" />
+    <Compile Include="Repositorios\HistorialMedicoRepository.cs" />
+    <Compile Include="Repositorios\InterfacesRepositorios\ICuotaRepository.cs" />
+    <Compile Include="Repositorios\InterfacesRepositorios\IEjercicioRepository.cs" />
+    <Compile Include="Repositorios\InterfacesRepositorios\IGastoAdministrativoRepository.cs" />
+    <Compile Include="Repositorios\InterfacesRepositorios\IHistorialMedicoRepository.cs" />
+    <Compile Include="Repositorios\InterfacesRepositorios\IMovimientoRepository.cs" />
+    <Compile Include="Repositorios\InterfacesRepositorios\IMusculoRepository.cs" />
+    <Compile Include="Repositorios\InterfacesRepositorios\IPagoRepository.cs" />
+    <Compile Include="Repositorios\InterfacesRepositorios\IProductoRepository.cs" />
+    <Compile Include="Repositorios\InterfacesRepositorios\IRepository.cs" />
+    <Compile Include="Repositorios\InterfacesRepositorios\IRutinaRepository.cs" />
+    <Compile Include="Repositorios\InterfacesRepositorios\ISocioRepository.cs" />
+    <Compile Include="Repositorios\InterfacesRepositorios\ITipoProductoRepository.cs" />
+    <Compile Include="Repositorios\InterfacesRepositorios\IUnitIOfWork.cs" />
+    <Compile Include="Repositorios\MovimientoRepository.cs" />
+    <Compile Include="Repositorios\MusculoRepository.cs" />
+    <Compile Include="Repositorios\PagoRepository.cs" />
+    <Compile Include="Repositorios\ProductoRepository.cs" />
+    <Compile Include="Repositorios\Repository.cs" />
+    <Compile Include="Repositorios\RutinaRepository.cs" />
+    <Compile Include="Repositorios\SocioRepository.cs" />
+    <Compile Include="Repositorios\TipoProductoRepository.cs" />
+    <Compile Include="UnitOfWork.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MapeoBD\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaDominio\CapaDominio.csproj">
+      <Project>{03e84a1e-93fb-479e-870e-a6674938b142}</Project>
+      <Name>CapaDominio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
- </Project>
+  <PropertyGroup>
+    <PostBuildEvent>
+    if not exist "$(TargetDir)x86" md "$(TargetDir)x86"
+    xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8854.1\NativeBinaries\x86\*.*" "$(TargetDir)x86"
+    if not exist "$(TargetDir)amd64" md "$(TargetDir)amd64"
+    xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8854.1\NativeBinaries\amd64\*.*" "$(TargetDir)amd64"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

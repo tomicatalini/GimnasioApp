@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace CapaDominio.ModuloGimnasio
 {
-    class LineaEjercicio
+    public class LineaEjercicio
     {
 
         public virtual int MusculoId { get; set; }

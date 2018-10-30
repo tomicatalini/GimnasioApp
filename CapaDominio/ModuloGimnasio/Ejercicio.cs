@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace CapaDominio.ModuloGimnasio
 {
-    class Ejercicio
+    public class Ejercicio
     {
 
         public int Id { get; set; }

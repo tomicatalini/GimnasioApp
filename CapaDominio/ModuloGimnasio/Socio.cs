@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CapaDominio.ModuloGimnasio
 {
-    class Socio
+    public class Socio
     {
         /// <summary>
         /// Numero de socio

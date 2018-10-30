@@ -2,7 +2,7 @@
 
 namespace CapaDominio.ModuloGimnasio
 {
-    class ActividadFisica
+    public class ActividadFisica
     {
 
         public long Id { get; set; }

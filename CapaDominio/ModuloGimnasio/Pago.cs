@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CapaDominio.ModuloGimnasio
 {
-    class Pago
+    public class Pago
     {
 
         public int NroPago { get; set; }
