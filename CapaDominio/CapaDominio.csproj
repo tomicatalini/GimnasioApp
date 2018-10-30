@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A5E0CEAB-6EFC-4D0E-AAF9-11B942D0AFF5}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
-    <RootNamespace>GimnasioApp</RootNamespace>
-    <AssemblyName>GimnasioApp</AssemblyName>
+    <ProjectGuid>{03E84A1E-93FB-479E-870E-A6674938B142}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CapaDominio</RootNamespace>
+    <AssemblyName>CapaDominio</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -39,42 +37,34 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Net.Http" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="ModuloComercio\GastoAdministrativo.cs" />
+    <Compile Include="ModuloComercio\LineaMovimiento.cs" />
+    <Compile Include="ModuloComercio\Movimiento.cs" />
+    <Compile Include="ModuloComercio\Producto.cs" />
+    <Compile Include="ModuloComercio\TipoMovimiento.cs" />
+    <Compile Include="ModuloComercio\TipoProducto.cs" />
+    <Compile Include="ModuloGimnasio\ActividadFisica.cs" />
+    <Compile Include="ModuloGimnasio\ContactoEmergencia.cs" />
+    <Compile Include="ModuloGimnasio\Cuota.cs" />
+    <Compile Include="ModuloGimnasio\DetalleRutina.cs" />
+    <Compile Include="ModuloGimnasio\Ejercicio.cs" />
+    <Compile Include="ModuloGimnasio\Enfermedad.cs" />
+    <Compile Include="ModuloGimnasio\FichaMedica.cs" />
+    <Compile Include="ModuloGimnasio\LimitacionFisica.cs" />
+    <Compile Include="ModuloGimnasio\LineaEjercicio.cs" />
+    <Compile Include="ModuloGimnasio\Medicacion.cs" />
+    <Compile Include="ModuloGimnasio\Mes.cs" />
+    <Compile Include="ModuloGimnasio\Musculo.cs" />
+    <Compile Include="ModuloGimnasio\Operacion.cs" />
+    <Compile Include="ModuloGimnasio\Pago.cs" />
+    <Compile Include="ModuloGimnasio\Rutina.cs" />
+    <Compile Include="ModuloGimnasio\Socio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
