@@ -99,7 +99,7 @@
             // 
             // flowMenu
             // 
-            this.flowMenu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.flowMenu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.flowMenu.Controls.Add(this.btnInicio);
             this.flowMenu.Controls.Add(this.panelSocio);
@@ -132,7 +132,22 @@
             this.btnInicio.Text = "Inicio";
             this.btnInicio.UseVisualStyleBackColor = false;
             this.btnInicio.Click += new System.EventHandler(this.ActivarBotonMenu_Click);
-            this.btnInicio.Leave += new System.EventHandler(this.LimpiarFormatoBoton_Leave);           
+            this.btnInicio.Leave += new System.EventHandler(this.LimpiarFormatoBoton_Leave);
+            // 
+            // imageListMenu
+            // 
+            this.imageListMenu.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListMenu.ImageStream")));
+            this.imageListMenu.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListMenu.Images.SetKeyName(0, "gestion.png");
+            this.imageListMenu.Images.SetKeyName(1, "inicio.png");
+            this.imageListMenu.Images.SetKeyName(2, "producto.png");
+            this.imageListMenu.Images.SetKeyName(3, "rutina.png");
+            this.imageListMenu.Images.SetKeyName(4, "socio.png");
+            this.imageListMenu.Images.SetKeyName(5, "gestion2.png");
+            this.imageListMenu.Images.SetKeyName(6, "inicio2.png");
+            this.imageListMenu.Images.SetKeyName(7, "producto2.png");
+            this.imageListMenu.Images.SetKeyName(8, "rutina2.png");
+            this.imageListMenu.Images.SetKeyName(9, "socio2.png");
             // 
             // panelSocio
             // 

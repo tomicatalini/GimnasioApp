@@ -103,6 +103,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\ProbandoFormularioPrincipal.resx">
+      <DependentUpon>ProbandoFormularioPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\SocioUI\BaseUI.resx">
       <DependentUpon>BaseUI.cs</DependentUpon>
     </EmbeddedResource>

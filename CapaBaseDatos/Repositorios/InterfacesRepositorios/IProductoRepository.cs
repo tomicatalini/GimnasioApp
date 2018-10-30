@@ -9,9 +9,7 @@ namespace CapaBaseDatos.Repositorios.InterfacesRepositorios
     /// </summary>
     public interface IProductoRepository : IRepository<Producto>
     {
-        //Agregar metodos de productos.
-        IList<Producto> GetByCadena(string cadena);
-        IList<TipoProducto> GetTiposProductos();
-        List<ProductoDTO> ListaProductosInfoCompleta();
+        
+        List<ProductoDTO> GetAllProductoDTO();
     }
 }
