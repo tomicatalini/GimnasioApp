@@ -59,6 +59,25 @@
   <ItemGroup>
     <Compile Include="DTO\ProductoDTO.cs" />
     <Compile Include="GimnasioBD.cs" />
+    <Compile Include="MapeoBD\ActividadFisicaMap.cs" />
+    <Compile Include="MapeoBD\ContactoEmergenciaMap.cs" />
+    <Compile Include="MapeoBD\CuotaMap.cs" />
+    <Compile Include="MapeoBD\DetalleRutinaMap.cs" />
+    <Compile Include="MapeoBD\EjercicioMap.cs" />
+    <Compile Include="MapeoBD\EnfermedadMap.cs" />
+    <Compile Include="MapeoBD\FichaMedicaMap.cs" />
+    <Compile Include="MapeoBD\GastoAdministrativoMap.cs" />
+    <Compile Include="MapeoBD\LimitacionFisicaMap.cs" />
+    <Compile Include="MapeoBD\LineaMovimientoMap.cs" />
+    <Compile Include="MapeoBD\MedicamentoMap.cs" />
+    <Compile Include="MapeoBD\MovimientoMap.cs" />
+    <Compile Include="MapeoBD\MusculoMap.cs" />
+    <Compile Include="MapeoBD\OperacionMap.cs" />
+    <Compile Include="MapeoBD\PagoMap.cs" />
+    <Compile Include="MapeoBD\ProductoMap.cs" />
+    <Compile Include="MapeoBD\RutinaMap.cs" />
+    <Compile Include="MapeoBD\SocioMap.cs" />
+    <Compile Include="MapeoBD\TipoProductoMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositorios\CuotaRepository.cs" />
     <Compile Include="Repositorios\EjercicioRepository.cs" />
@@ -87,9 +106,7 @@
     <Compile Include="Repositorios\TipoProductoRepository.cs" />
     <Compile Include="UnitOfWork.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="MapeoBD\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\CapaDominio\CapaDominio.csproj">
       <Project>{03e84a1e-93fb-479e-870e-a6674938b142}</Project>
