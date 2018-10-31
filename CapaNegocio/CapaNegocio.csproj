@@ -53,6 +53,7 @@
     <Compile Include="Controladores\ControladorCuota.cs" />
     <Compile Include="Controladores\ControladorEnfermedad.cs" />
     <Compile Include="Controladores\ControladorFichaMedica.cs" />
+    <Compile Include="Controladores\ControladorGastoAdministrativo.cs" />
     <Compile Include="Controladores\ControladorGestion.cs" />
     <Compile Include="Controladores\ControladorLimitacionFisica.cs" />
     <Compile Include="Controladores\ControladorMedicacion.cs" />

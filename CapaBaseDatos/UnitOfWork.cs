@@ -26,11 +26,10 @@ namespace CapaBaseDatos
             this.MusculoRepository = new MusculoRepository(this.iDbContext);
             //this.PagoRepository = new PagoRepository(this.iDbContext);
             this.RutinaRepository = new RutinaRepository(this.iDbContext);
-            //this.MovimientoRepository = new MovimientoRepository(this.iDbContext);
-            //this.GastoAdministrativoRepository = new GastoAdministrativoRepository(this.iDbContext);
+            this.MovimientoRepository = new MovimientoRepository(this.iDbContext);
+            this.GastoAdministrativoRepository = new GastoAdministrativoRepository(this.iDbContext);
             this.ProductoRepository = new ProductoRepository(this.iDbContext);
             this.HistorialMedicoRepository = new HistorialMedicoRepository(this.iDbContext);
-            //this.MarcaRepository = new MarcaRepository(this.iDbContext);
             this.TipoProductoRepository = new TipoProductoRepository(this.iDbContext);
         }
 
@@ -53,22 +52,22 @@ namespace CapaBaseDatos
 
         public IRutinaRepository RutinaRepository { get; private set; }
 
-        //public IMovimientoRepository MovimientoRepository
-        //{
-        //    get; private set;
-        //}
+        public IMovimientoRepository MovimientoRepository
+        {
+            get; private set;
+        }
 
-        //public IGastoAdministrativoRepository GastoAdministrativoRepository
-        //{
-        //    get; private set;
-        //}
+        public IGastoAdministrativoRepository GastoAdministrativoRepository
+        {
+            get; private set;
+        }
 
         public IProductoRepository ProductoRepository
         {
             get; private set;
         }
 
-        //public IMarcaRepository MarcaRepository { get; private set; }
+        
         public ITipoProductoRepository TipoProductoRepository { get; private set; }
 
         public IHistorialMedicoRepository HistorialMedicoRepository
