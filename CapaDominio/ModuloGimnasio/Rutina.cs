@@ -12,7 +12,7 @@ namespace CapaDominio.ModuloGimnasio
         public DateTime FecInicio { get; set; }
 
         public virtual IList<Socio> Socios { get; set; }
-        public virtual IList<DetalleRutina> DetallesRutina { get; set; }
+        public virtual IList<DiaRutina> DetallesRutina { get; set; }
 
         public Rutina(string nombre, int duracion, DateTime fechaIncio)
         {
@@ -22,7 +22,7 @@ namespace CapaDominio.ModuloGimnasio
             this.Nombre = nombre;
 
             this.Socios = new List<Socio>();
-            this.DetallesRutina = new List<DetalleRutina>();
+            this.DetallesRutina = new List<DiaRutina>();
         }
     }
 }
