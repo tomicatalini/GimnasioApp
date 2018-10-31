@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using CapaDominio.ModuloGimnasio;
-using System;
+﻿using CapaDominio.ModuloGimnasio;
 using CapaBaseDatos.Repositorios.InterfacesRepositorios;
 
 

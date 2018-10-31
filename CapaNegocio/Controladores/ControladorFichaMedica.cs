@@ -1,7 +1,6 @@
 ﻿using System;
 using CapaBaseDatos;
 using CapaDominio.ModuloGimnasio;
-using CapaNegocio.Controladores;
 
 namespace CapaNegocio.Controladores
 {

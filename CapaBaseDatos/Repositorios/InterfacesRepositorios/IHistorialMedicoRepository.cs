@@ -7,6 +7,6 @@ namespace CapaBaseDatos.Repositorios.InterfacesRepositorios
     /// </summary>
     public interface IHistorialMedicoRepository : IRepository<FichaMedica>
     {
-        //agregar metodos de historial medico.
+        
     }
 }
