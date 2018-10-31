@@ -157,34 +157,26 @@ namespace GimnasioApp.GUI.ProductoUI
             VnaPpal.dataGridProductos.DataSource = adminProd.GetProductoDTOs();
         }
 
+        private void dataGridProductos_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            this.btnEdit.Visible = true;
+            this.btnEdit.Enabled = true;
+            this.btnDelete.Enabled = true;
+            this.btnDelete.Visible = true;
+        }
+
+
+
         private void btnAdd_Click(object sender, EventArgs e)
         {
 
             var btn = (Button)sender;
+            var adminProd = new ControladorProducto();
             var altaProductoUI = new AltaProductoUI("Alta");
-            
-            altaProductoUI.Dock = DockStyle.Fill;
-            altaProductoUI.TopLevel = false;
-            this.panelCU.Controls.Add(altaProductoUI);
-            this.panelCU.Location = new Point(this.Width - 398, 0);
-            this.panelCU.Width = 408;
-            altaProductoUI.Show();
-            this.panelCU.Visible = true;
-            
-            //var formPrincipal = this.TopLevelControl;
 
+            altaProductoUI.ShowDialog();
 
-            //formPrincipal.Controls["panelContenedor"].Controls.Add(altaProductoUI);
-            //formPrincipal.Controls["panelContenedor"].Tag = altaProductoUI;
-            //altaProductoUI.Show();
-
-            //this.Hide();
-        }
-
-        private void dataGridProductos_RowEnter(object sender, DataGridViewCellEventArgs e)
-        {
-            this.btnEdit.Enabled = true;
-            this.btnDelete.Enabled = true;
+            this.dataGridProductos.DataSource = adminProd.GetProductoDTOs();
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -195,17 +187,9 @@ namespace GimnasioApp.GUI.ProductoUI
             var unProd = adminProd.GetProductoDTOs().Single(prod => prod.CodProducto == codigo);
 
             var altaProductoUI = new AltaProductoUI("Modificar", unProd);
-            var formPrincipal = this.TopLevelControl;
 
-            altaProductoUI.Height = this.Height;
-            altaProductoUI.Width = this.Width;
-            altaProductoUI.TopLevel = false;
-            altaProductoUI.Dock = DockStyle.Fill;
-            formPrincipal.Controls["panelContenedor"].Controls.Add(altaProductoUI);
-            formPrincipal.Controls["panelContenedor"].Tag = altaProductoUI;
-            altaProductoUI.Show();
-
-            this.Hide();
+            altaProductoUI.ShowDialog();
+            this.dataGridProductos.DataSource = adminProd.GetProductoDTOs();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

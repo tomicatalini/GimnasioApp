@@ -6,11 +6,11 @@ namespace CapaBaseDatos.Repositorios
     /// <summary>
     /// Repositorio de entidad GastoAdministrativo
     /// </summary>
-    public class GastoAdministrativoRepository //: Repository<GastoAdministrativo, GimnasioBD>, IGastoAdministrativoRepository
+    public class GastoAdministrativoRepository: Repository<GastoAdministrativo, GimnasioBD>, IGastoAdministrativoRepository
     {
-        //public GastoAdministrativoRepository(GymMatiContext pContext) : base (pContext)
-        //{
+        public GastoAdministrativoRepository(GimnasioBD pContext) : base(pContext)
+        {
 
-        //}
+        }
     }
 }

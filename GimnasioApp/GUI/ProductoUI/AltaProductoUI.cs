@@ -15,11 +15,13 @@ namespace GimnasioApp.GUI.ProductoUI
     public partial class AltaProductoUI : Form
     {
         bool iModificado;
+        string iTipoVentana;
         //El tipo de ventana hace referencia a que si va a ser de Alta o Modificar
         public AltaProductoUI(string tipoVentana)
         {
             InitializeComponent();
             this.iModificado = false;
+            this.iTipoVentana = tipoVentana;
 
             string texto = string.Format("{0} - Producto", tipoVentana);
             this.labelTitulo.Text = texto;
@@ -49,7 +51,9 @@ namespace GimnasioApp.GUI.ProductoUI
             ControladorProducto adminProd = new ControladorProducto();
             AltaProductoUI ventanaPpal = (AltaProductoUI)sender;
 
-            ventanaPpal.txtCodProducto.Text = adminProd.GetCodigoNuevoProducto().ToString();
+            if(this.iTipoVentana == "Alta")
+                ventanaPpal.txtCodProducto.Text = adminProd.GetCodigoNuevoProducto().ToString();
+
             ventanaPpal.cbxTipo.DataSource = adminProd.GetTipoProductos();
         }
 
@@ -67,21 +71,18 @@ namespace GimnasioApp.GUI.ProductoUI
             float precio = float.Parse(ventanaPpal.txtPrecio.Text.Trim());
             string descripcion = ventanaPpal.rTxtDescripcion.Text.Trim();
 
-            if (this.iModificado)
-            {
-                adminProd.ModificarProducto(codProducto, marca, nombre, tipoProducto, contenido, precio, descripcion);
-            }
-            else
+
+            if (this.iTipoVentana == "Alta")
             {
                 adminProd.AltaProducto(codProducto, marca, nombre, tipoProducto, contenido, precio, descripcion);
             }
+            else
+            {
+                if (this.iModificado)
+                    adminProd.ModificarProducto(codProducto, marca, nombre, tipoProducto, contenido, precio, descripcion);
+            }
 
             adminProd.GuardarCambios();
-        }
-
-        private void CerrarVentana(object sender, EventArgs e)
-        {
-            //this.Owner.Show();
             this.Close();
         }
 
@@ -123,11 +124,13 @@ namespace GimnasioApp.GUI.ProductoUI
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            var formPrincipal = this.TopLevelControl;
-            var buscarProductoUI = formPrincipal.Controls["panelContenedor"].Controls["BuscarProductoUI"];
-
-            buscarProductoUI.Show();
             this.Close();
+          
+        }
+
+        private void txtMarca_TextChanged(object sender, EventArgs e)
+        {
+            this.iModificado = true;
         }
     }
 }

@@ -14,6 +14,7 @@ namespace GimnasioApp
     public partial class ProbandoFormularioPrincipal : Form
     {
         string botonActivo;
+        Button iBotonActivo;
         Form iFormularioActivo;
 
         public ProbandoFormularioPrincipal()
@@ -22,14 +23,15 @@ namespace GimnasioApp
             InitializeComponent();
             this.btnInicio.Focus();
             botonActivo = "btnInicio";
+            this.iBotonActivo = this.btnInicio;
 
 
         }
 
         private void btnInicio_click(object sender, EventArgs e)
         {
-            DarFormatoBoton_Click(sender);
-
+           
+            
             //var inicioUI = new InicioUI();
             //inicioUI.TopLevel = false;
             //inicioUI.Dock = DockStyle.Fill;
@@ -38,9 +40,22 @@ namespace GimnasioApp
             //inicioUI.Show(this);
         }
 
+        public void AbrirFormularioHijo(object formulario)
+        {
+            if (this.panelContenedor.Controls.Count > 0)
+                this.panelContenedor.Controls.RemoveAt(0);
+
+            var formHijo = (Form)formulario;
+            formHijo.TopLevel = false;
+            formHijo.TopMost = true;
+            formHijo.Dock = DockStyle.Fill;
+            this.panelContenedor.Controls.Add(formHijo);
+            formHijo.Show();
+        }
+
         private void btnProducto_click(object sender, EventArgs e)
         {
-            DarFormatoBoton_Click(sender);
+            
             var buscarProductoUI = new InventarioProductoUI(false);
             this.iFormularioActivo = buscarProductoUI;
 
@@ -51,13 +66,44 @@ namespace GimnasioApp
             buscarProductoUI.Show();
         }
 
-        private void DarFormatoBoton_Click(object sender)
+        private void DarFormatoBoton_Click(Button button)
         {
-            var btn = (Button)sender;
+            button.ForeColor = Color.White;
+            button.BackColor = Color.FromArgb(255, 60, 51);
+            //button.ImageKey = string.Format("{0}2.png", button.Name.Remove(0, 3).ToLower());
+        }
 
-            btn.ForeColor = Color.White;
-            btn.BackColor = Color.FromArgb(255, 60, 51);
-            btn.ImageKey = string.Format("{0}2.png", btn.Name.Remove(0, 3).ToLower());
+        private void LimpiarFormatoBoton_Leave(Button button)
+        {
+
+            button.BackColor = Color.White;
+            button.ForeColor = Color.Black;
+            //button.ImageKey = string.Format("{0}.png", button.Name.Remove(0, 3).ToLower());
+        }
+
+        private void ActivarBotonMenu_Click(object sender, EventArgs e)
+        {
+            var btn = (Button)sender;            
+            DimensionarPanel_ButtonClick(btn);
+            AbrirFormularioHijo(new InventarioProductoUI(true));
+        }
+
+        private void DimensionarPanel_ButtonClick(Button button)
+        {
+            var panelBoton = (FlowLayoutPanel)button.Parent;
+            var panelBotonActivo = (FlowLayoutPanel)this.iBotonActivo.Parent;
+
+            if (panelBoton.Name != panelBotonActivo.Name)
+            {
+                LimpiarFormatoBoton_Leave(this.iBotonActivo);
+                DarFormatoBoton_Click(button);
+                panelBoton.AutoSize = true;
+                panelBotonActivo.AutoSize = false;
+                panelBotonActivo.Size = new Size(220, 50);
+                
+                this.iBotonActivo = button;
+            }
+
         }
 
         private void FormatoBotonInterno_Hover(object sender, EventArgs e)
@@ -74,29 +120,10 @@ namespace GimnasioApp
             btn.BackgroundImage = null;
         }
 
-        private void LimpiarFormatoBoton_Leave(object sender, EventArgs e)
-        {
-            var btn = (Button)sender;
+        
 
-            btn.BackColor = Color.White;
-            btn.ForeColor = Color.Black;
-            btn.ImageKey = string.Format("{0}.png", btn.Name.Remove(0, 3).ToLower());
-        }
+        
 
-        private void ActivarBotonMenu_Click(object sender, EventArgs e)
-        {
-            var btn = (Button)sender;
-            DarFormatoBoton_Click(btn);
-
-            if (this.botonActivo == btn.Name)
-            {
-                AcomodarPanel("otro");
-            }
-            else
-            {
-                AcomodarPanel(btn.Name);
-            }
-        }
 
         private void AcomodarPanel(string botonName)
         {
@@ -158,7 +185,7 @@ namespace GimnasioApp
                 this.iFormularioActivo = new CompraVentaProductoUI("Reposición");
             }
 
-            DarFormatoBoton_Click(sender);
+            
             this.iFormularioActivo.TopLevel = false;
             this.iFormularioActivo.Dock = DockStyle.Fill;
             this.panelContenedor.Controls.Add(this.iFormularioActivo);
