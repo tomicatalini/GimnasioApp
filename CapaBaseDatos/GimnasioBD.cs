@@ -43,13 +43,13 @@ namespace CapaBaseDatos
         public DbSet<Operacion> Operaciones {get; set;}
 
         ////Repositorios Movimiento
-        //public DbSet<MovimientoDTO> Movimientos { get; set; }
-        //public DbSet<LineaMovimientoDTO> LineasMovimientos { get; set; }
+        public DbSet<Movimiento> Movimientos { get; set; }
+        public DbSet<LineaMovimiento> LineasMovimientos { get; set; }
         public DbSet<Producto> Productos { get; set; }
         public DbSet<TipoProducto> TiposProductos { get; set; }
 
         ////Repositorio Gasto Administrativo
-        //public DbSet<GastoAdministrativoDTO> GastosAdministrativos { get; set; }
+        public DbSet<GastoAdministrativo> GastosAdministrativos { get; set; }
 
         //Configuracion de mapeo
         protected override void OnModelCreating(DbModelBuilder pModelBuilder)

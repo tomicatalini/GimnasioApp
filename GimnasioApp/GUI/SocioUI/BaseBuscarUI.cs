@@ -13,6 +13,7 @@ namespace GimnasioApp.GUI.SocioUI
 {
     public partial class BaseBuscarUI : Form
     {
+
         /// <summary>
         /// Constructor
         /// </summary>
@@ -67,7 +68,8 @@ namespace GimnasioApp.GUI.SocioUI
             else
             {
                 e.Handled = true;
-            }
+            }     
+
         }
 
         /// <summary>
