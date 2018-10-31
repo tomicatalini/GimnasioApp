@@ -67,6 +67,8 @@ namespace CapaBaseDatos
             get; private set;
         }
 
+   
+
         
         public ITipoProductoRepository TipoProductoRepository { get; private set; }
 
