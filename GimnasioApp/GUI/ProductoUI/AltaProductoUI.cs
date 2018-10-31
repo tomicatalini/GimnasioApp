@@ -49,7 +49,7 @@ namespace GimnasioApp.GUI.ProductoUI
             ControladorProducto adminProd = new ControladorProducto();
             AltaProductoUI ventanaPpal = (AltaProductoUI)sender;
 
-            ventanaPpal.txtCodProducto.Text = adminProd.NumeroNuevoProducto().ToString();
+            ventanaPpal.txtCodProducto.Text = adminProd.GetCodigoNuevoProducto().ToString();
             ventanaPpal.cbxTipo.DataSource = adminProd.GetTipoProductos();
         }
 

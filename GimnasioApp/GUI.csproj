@@ -106,6 +106,12 @@
     <EmbeddedResource Include="GUI\ProbandoFormularioPrincipal.resx">
       <DependentUpon>ProbandoFormularioPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ProductoUI\AltaProductoUI.resx">
+      <DependentUpon>AltaProductoUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ProductoUI\InventarioProductoUI.resx">
+      <DependentUpon>InventarioProductoUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\SocioUI\BaseUI.resx">
       <DependentUpon>BaseUI.cs</DependentUpon>
     </EmbeddedResource>
@@ -117,6 +123,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -146,6 +153,11 @@
       <Name>CapaNegocio</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\buscar_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filtro_32.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

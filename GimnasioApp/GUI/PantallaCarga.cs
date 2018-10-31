@@ -49,7 +49,7 @@ namespace GimnasioApp.GUI
         {
 
             ControladorProducto adminProd = new ControladorProducto();
-            adminProd.GetProductos();
+            adminProd.GetAllProductos();
         }
 
         private void segundoPlano_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)

@@ -154,7 +154,7 @@ namespace GimnasioApp.GUI.ProductoUI
             var adminProd = new ControladorProducto();
             var VnaPpal = (InventarioProductoUI)sender;
 
-            VnaPpal.dataGridProductos.DataSource = adminProd.ListarProductosInfoCompleta();
+            VnaPpal.dataGridProductos.DataSource = adminProd.GetProductoDTOs();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -162,17 +162,23 @@ namespace GimnasioApp.GUI.ProductoUI
 
             var btn = (Button)sender;
             var altaProductoUI = new AltaProductoUI("Alta");
-            var formPrincipal = this.TopLevelControl;
-
-            altaProductoUI.Height = this.Height;
-            altaProductoUI.Width = this.Width;
-            altaProductoUI.TopLevel = false;
+            
             altaProductoUI.Dock = DockStyle.Fill;
-            formPrincipal.Controls["panelContenedor"].Controls.Add(altaProductoUI);
-            formPrincipal.Controls["panelContenedor"].Tag = altaProductoUI;
+            altaProductoUI.TopLevel = false;
+            this.panelCU.Controls.Add(altaProductoUI);
+            this.panelCU.Location = new Point(this.Width - 398, 0);
+            this.panelCU.Width = 408;
             altaProductoUI.Show();
+            this.panelCU.Visible = true;
+            
+            //var formPrincipal = this.TopLevelControl;
 
-            this.Hide();
+
+            //formPrincipal.Controls["panelContenedor"].Controls.Add(altaProductoUI);
+            //formPrincipal.Controls["panelContenedor"].Tag = altaProductoUI;
+            //altaProductoUI.Show();
+
+            //this.Hide();
         }
 
         private void dataGridProductos_RowEnter(object sender, DataGridViewCellEventArgs e)
@@ -186,7 +192,7 @@ namespace GimnasioApp.GUI.ProductoUI
             var btn = (Button)sender;
             var adminProd = new ControladorProducto();
             var codigo = (int)dataGridProductos.CurrentRow.Cells["codProducto"].Value;
-            var unProd = adminProd.ListarProductosInfoCompleta().Single(prod => prod.CodProducto == codigo);
+            var unProd = adminProd.GetProductoDTOs().Single(prod => prod.CodProducto == codigo);
 
             var altaProductoUI = new AltaProductoUI("Modificar", unProd);
             var formPrincipal = this.TopLevelControl;

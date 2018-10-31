@@ -26,7 +26,7 @@ namespace CapaNegocio.Controladores
         /// <param name="pFichaId"></param>
         public void AltaMedicacion(int pId, string pNombre, int pFichaId)
         {
-            var unaFichaMedica = this.iUnitOfWork.HistorialMedicoRepositor.Get(pFichaId);
+            var unaFichaMedica = this.iUnitOfWork.HistorialMedicoRepository.Get(pFichaId);
             var unaMedicacion = new Medicacion(pId, pNombre, unaFichaMedica);
 
             unaFichaMedica.Medicaciones.Add(unaMedicacion);

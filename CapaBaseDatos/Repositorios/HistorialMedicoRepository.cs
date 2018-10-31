@@ -2,7 +2,7 @@
 using System.Linq;
 using CapaDominio.ModuloGimnasio;
 using System;
-using CapaBaseDatos;
+using CapaBaseDatos.Repositorios.InterfacesRepositorios;
 
 
 namespace CapaBaseDatos.Repositorios
