@@ -43,6 +43,7 @@ namespace CapaBaseDatos
             get; private set;
         }
 
+        public IRutinaRepository RutinaRepository { get; private set; }
         public IEjercicioRepository EjercicioRepository { get; private set; }
         public IMusculoRepository MusculoRepository { get; private set; }
         //public IPagoRepository PagoRepository
@@ -50,7 +51,7 @@ namespace CapaBaseDatos
         //    get; private set;
         //}
 
-        public IRutinaRepository RutinaRepository { get; private set; }
+        
 
         public IMovimientoRepository MovimientoRepository
         {

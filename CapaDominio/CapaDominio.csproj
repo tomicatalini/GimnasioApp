@@ -57,7 +57,7 @@
     <Compile Include="ModuloGimnasio\ActividadFisica.cs" />
     <Compile Include="ModuloGimnasio\ContactoEmergencia.cs" />
     <Compile Include="ModuloGimnasio\Cuota.cs" />
-    <Compile Include="ModuloGimnasio\DetalleRutina.cs" />
+    <Compile Include="ModuloGimnasio\DiaRutina.cs" />
     <Compile Include="ModuloGimnasio\Ejercicio.cs" />
     <Compile Include="ModuloGimnasio\Enfermedad.cs" />
     <Compile Include="ModuloGimnasio\FichaMedica.cs" />
