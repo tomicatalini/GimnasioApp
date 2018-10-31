@@ -33,14 +33,14 @@ namespace CapaBaseDatos
         //public DbSet<MusculoDTO> Musculos { get; set; }
         //public DbSet<EjercicioDTO> Ejercios { get; set; }
 
-        ////Repositorios Ficha Medica
-        //public DbSet<FichaMedicaDTO> FichasMedicas { get; set; }
-        //public DbSet<ActividadFisicaDTO> ActividadesFisicas { get; set; }
-        //public DbSet<ContactoEmergenciaDTO> ContactosEmergencia { get; set; }
-        //public DbSet<EnfermedadDTO> Enfermedades {get; set;}
-        //public DbSet<LimitacionFisicaDTO> LimitacionesFisicas {get; set;}
-        //public DbSet<MedicacionDTO> Medicamentos {get; set;}
-        //public DbSet<OperacionDTO> Operaciones {get; set;}
+        ///Repositorios Ficha Medica
+        public DbSet<FichaMedicaDTO> FichasMedicas { get; set; }
+        public DbSet<ActividadFisicaDTO> ActividadesFisicas { get; set; }
+        public DbSet<ContactoEmergenciaDTO> ContactosEmergencia { get; set; }
+        public DbSet<EnfermedadDTO> Enfermedades {get; set;}
+        public DbSet<LimitacionFisicaDTO> LimitacionesFisicas {get; set;}
+        public DbSet<MedicacionDTO> Medicamentos {get; set;}
+        public DbSet<OperacionDTO> Operaciones {get; set;}
 
         ////Repositorios Movimiento
         //public DbSet<MovimientoDTO> Movimientos { get; set; }

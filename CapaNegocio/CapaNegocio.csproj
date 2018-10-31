@@ -48,8 +48,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controladores\ControladorActividadFisica.cs" />
+    <Compile Include="Controladores\ControladorContactoEmergencia.cs" />
     <Compile Include="Controladores\ControladorCuota.cs" />
+    <Compile Include="Controladores\ControladorEnfermedad.cs" />
+    <Compile Include="Controladores\ControladorFichaMedica.cs" />
     <Compile Include="Controladores\ControladorGestion.cs" />
+    <Compile Include="Controladores\ControladorLimitacionFisica.cs" />
+    <Compile Include="Controladores\ControladorMedicacion.cs" />
+    <Compile Include="Controladores\ControladorOperacion.cs" />
     <Compile Include="Controladores\ControladorProducto.cs" />
     <Compile Include="Controladores\ControladorRutina.cs" />
     <Compile Include="Controladores\ControladorSocio.cs" />

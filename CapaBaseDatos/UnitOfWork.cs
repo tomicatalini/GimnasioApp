@@ -29,7 +29,7 @@ namespace CapaBaseDatos
             //this.MovimientoRepository = new MovimientoRepository(this.iDbContext);
             //this.GastoAdministrativoRepository = new GastoAdministrativoRepository(this.iDbContext);
             this.ProductoRepository = new ProductoRepository(this.iDbContext);
-            //this.HistorialMedicoRepository = new HistorialMedicoRepository(this.iDbContext);
+            this.HistorialMedicoRepository = new HistorialMedicoRepository(this.iDbContext);
             //this.MarcaRepository = new MarcaRepository(this.iDbContext);
             this.TipoProductoRepository = new TipoProductoRepository(this.iDbContext);
         }
@@ -71,10 +71,10 @@ namespace CapaBaseDatos
         //public IMarcaRepository MarcaRepository { get; private set; }
         public ITipoProductoRepository TipoProductoRepository { get; private set; }
 
-        //public IHistorialMedicoRepository HistorialMedicoRepository
-        //{
-        //    get; private set;
-        //}
+        public IHistorialMedicoRepository HistorialMedicoRepository
+        {
+            get; private set;
+        }
 
         public void Complete()
         {

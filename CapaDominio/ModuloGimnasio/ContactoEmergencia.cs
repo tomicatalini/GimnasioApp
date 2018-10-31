@@ -1,4 +1,9 @@
-﻿
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
 namespace CapaDominio.ModuloGimnasio
 {
     public class ContactoEmergencia
@@ -11,5 +16,21 @@ namespace CapaDominio.ModuloGimnasio
         //Relationship navigation
         public virtual int FichaId { get; set; }
         public virtual FichaMedica FichaMedica { get; set; }
+
+        /// <summary>
+        /// Constructor ConctactoEmergencia
+        /// </summary>
+        /// <param name="pId"></param>
+        /// <param name="pNombre"></param>
+        /// <param name="pTelefono"></param>
+        /// <param name="pFichaID"></param>
+        public ContactoEmergencia(int pId, string pNombre, long pTelefono, FichaMedica pFichaMedica)
+        {
+            Id = pId;
+            Nombre = pNombre;
+            Telefono = pTelefono;
+            FichaId = pFichaMedica.FichaId;
+        }
     }
+
 }

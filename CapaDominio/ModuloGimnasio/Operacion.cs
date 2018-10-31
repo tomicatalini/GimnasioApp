@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace CapaDominio.ModuloGimnasio
 {
     public class Operacion
@@ -10,5 +11,14 @@ namespace CapaDominio.ModuloGimnasio
 
         public virtual int FichaId { get; set; }
         public virtual FichaMedica FichaMedica { get; set; }
+
+        public Operacion(int pId, string pNombre, DateTime pFecOperacion, DateTime pFecAltaMedica, FichaMedica pFichaMedica)
+        {
+            Id = pId;
+            Nombre = pNombre;
+            FecOperacion = pFecOperacion;
+            FecAltaMedica = pFecAltaMedica;
+            FichaId = pFichaMedica.FichaId;
+        }
     }
 }
