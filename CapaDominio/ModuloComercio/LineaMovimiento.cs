@@ -13,5 +13,16 @@ namespace CapaDominio.ModuloComercio
 
         public virtual int CodProducto { get; set; }
         public virtual Producto Producto { get; set; }
+
+        public LineaMovimiento(){}
+
+        public LineaMovimiento(int pId, int pCantidad, float pPrecioUnitario, int pIdMovimiento, Producto pProducto)
+        {
+            Id = pId;
+            Cantidad = pCantidad;
+            PrecioUnitario = pPrecioUnitario;
+            this.MovimientoId = pIdMovimiento;
+            Producto = pProducto;
+        }
     }
 }
