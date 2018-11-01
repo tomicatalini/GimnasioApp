@@ -371,7 +371,7 @@
             this.panelProductos.Location = new System.Drawing.Point(2, 218);
             this.panelProductos.Margin = new System.Windows.Forms.Padding(2);
             this.panelProductos.Name = "panelProductos";
-            this.panelProductos.Size = new System.Drawing.Size(220, 50);
+            this.panelProductos.Size = new System.Drawing.Size(220, 150);
             this.panelProductos.TabIndex = 0;
             this.panelProductos.WrapContents = false;
             // 
@@ -434,7 +434,7 @@
             // panelGestion
             // 
             this.panelGestion.Controls.Add(this.btnGestion);
-            this.panelGestion.Location = new System.Drawing.Point(2, 272);
+            this.panelGestion.Location = new System.Drawing.Point(2, 372);
             this.panelGestion.Margin = new System.Windows.Forms.Padding(2);
             this.panelGestion.Name = "panelGestion";
             this.panelGestion.Size = new System.Drawing.Size(220, 50);

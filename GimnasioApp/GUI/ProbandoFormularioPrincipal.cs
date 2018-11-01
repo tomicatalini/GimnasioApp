@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GimnasioApp.GUI.ProductoUI;
+using GimnasioApp.GUI;
 
 namespace GimnasioApp
 {
@@ -83,9 +84,10 @@ namespace GimnasioApp
 
         private void ActivarBotonMenu_Click(object sender, EventArgs e)
         {
-            var btn = (Button)sender;            
+            var btn = (Button)sender;
             DimensionarPanel_ButtonClick(btn);
-            AbrirFormularioHijo(new InventarioProductoUI(true));
+            var formulario = FormularioSegunBoton(btn.Name);
+            AbrirFormularioHijo(formulario);
         }
 
         private void DimensionarPanel_ButtonClick(Button button)
@@ -104,72 +106,6 @@ namespace GimnasioApp
                 this.iBotonActivo = button;
             }
 
-        }
-
-        private void FormatoBotonInterno_Hover(object sender, EventArgs e)
-        {
-            var btn = (Button)sender;
-
-            btn.BackgroundImage = Image.FromFile(@"C:\Users\tomi_\Desktop\Poryecto Habilitacion\Iconos\probando.png");
-        }
-
-        private void FormatoBotonInterno_Leave(object sender, EventArgs e)
-        {
-            var btn = (Button)sender;
-
-            btn.BackgroundImage = null;
-        }
-
-        
-
-        
-
-
-        private void AcomodarPanel(string botonName)
-        {
-
-            switch (botonName)
-            {
-                case "btnSocio":
-                    this.panelSocio.Height = 258;
-                    this.panelProductos.Height = 50;
-                    this.panelRutina.Height = 50;
-                    this.panelGestion.Height = 50;
-                    this.botonActivo = botonName;
-                    break;
-                case "btnProducto":
-                    this.panelProductos.Height = 118;
-                    this.panelSocio.Height = 50;
-                    this.panelRutina.Height = 50;
-                    this.panelGestion.Height = 50;
-                    this.botonActivo = botonName;
-                    break;
-                case "btnGestion":
-                    this.panelGestion.Height = 50;
-                    this.panelProductos.Height = 50;
-                    this.panelRutina.Height = 50;
-                    this.panelSocio.Height = 50;
-                    this.botonActivo = botonName;
-                    break;
-                case "btnRutina":
-                    this.panelRutina.Height = 50;
-                    this.panelGestion.Height = 50;
-                    this.panelProductos.Height = 50;
-                    this.panelSocio.Height = 50;
-                    this.botonActivo = botonName;
-                    break;
-
-                default:
-                    this.panelGestion.Height = 50;
-                    this.panelProductos.Height = 50;
-                    this.panelSocio.Height = 50;
-                    this.panelRutina.Height = 50;
-
-                    this.botonActivo = "btnInicio";
-                    this.btnInicio.Focus();
-                    DarFormatoBoton_Click(btnInicio);
-                    break;
-            }
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -191,6 +127,32 @@ namespace GimnasioApp
             this.panelContenedor.Controls.Add(this.iFormularioActivo);
             this.panelContenedor.Tag = this.iFormularioActivo;
             this.iFormularioActivo.Show();
+        }
+
+        public Form FormularioSegunBoton(string nombreBoton)
+        {
+            switch (nombreBoton)
+            {
+                case "btnInicio":
+                    return new InicioUI();
+                case "btnSocio":
+                    return null;
+                case "btnProducto":
+                    return new InventarioProductoUI(false);
+                case "btnCuota":
+                    return null;
+                case "btnRutina":
+                    return null;
+                case "btnGestion":
+                    return null;
+                case "btnComprarProd":
+                    return new CompraVentaProductoUI("Compra");
+                case "btnVenderProd":
+                    return new CompraVentaProductoUI("Venta");                
+
+                default:
+                    return null;
+            }
         }
     }
 }
