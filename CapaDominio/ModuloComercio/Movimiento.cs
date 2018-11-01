@@ -12,7 +12,12 @@ namespace CapaDominio.ModuloComercio
         public virtual IList<LineaMovimiento> LineaMovimientos { get; set; }
 
         public Movimiento(){}
-
+        /// <summary>
+        /// Constructor movimiento
+        /// </summary>
+        /// <param name="pId"></param>
+        /// <param name="pFecha"></param>
+        /// <param name="pTipoMovimiento"></param>
         public Movimiento(int pId, DateTime pFecha, TipoMovimiento pTipoMovimiento)
         {
             Id = pId;
