@@ -104,6 +104,7 @@ namespace CapaNegocio.Controladores
         {
 
             //Obtiene la referencia al objeto segun su codigo de producto
+            var tipos = this.iUnitOfWork.ProductoRepository.GetAll();
             var unProducto = this.iUnitOfWork.ProductoRepository.Get(codProducto);
             var tipoProducto = this.GetTipoProductos().Where(tipo => tipo.Nombre == tipoProd).First();
 

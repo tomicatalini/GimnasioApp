@@ -29,9 +29,9 @@ namespace CapaBaseDatos
 
         ////Repositorios Rutina
         public DbSet<Rutina> Rutinas { get; set; }
-        //public DbSet<DetalleRutinaDTO> DetallesRutinas {get; set;}
-        //public DbSet<MusculoDTO> Musculos { get; set; }
-        //public DbSet<EjercicioDTO> Ejercios { get; set; }
+        public DbSet<DiaRutina> DetallesRutinas {get; set;}
+        public DbSet<Musculo> Musculos { get; set; }
+        public DbSet<Ejercicio> Ejercios { get; set; }
 
         ///Repositorios Ficha Medica
         public DbSet<FichaMedica> FichasMedicas { get; set; }

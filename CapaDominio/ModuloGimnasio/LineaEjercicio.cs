@@ -4,6 +4,8 @@ namespace CapaDominio.ModuloGimnasio
     public class LineaEjercicio
     {
 
+        public int Id { get; set; }
+        public int Linea { get; set; }
         public virtual int MusculoId { get; set; }
         public virtual Musculo Musculo { get; set; }
 

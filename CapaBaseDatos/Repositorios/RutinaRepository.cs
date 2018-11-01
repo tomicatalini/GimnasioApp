@@ -1,5 +1,6 @@
 ﻿using CapaBaseDatos.Repositorios.InterfacesRepositorios;
 using CapaDominio.ModuloGimnasio;
+using System.Collections.Generic;
 
 namespace CapaBaseDatos.Repositorios
 {
@@ -8,9 +9,12 @@ namespace CapaBaseDatos.Repositorios
     /// </summary>
     public class RutinaRepository : Repository<Rutina, GimnasioBD>, IRutinaRepository
     {
-        public RutinaRepository(GimnasioBD pContext) : base(pContext)
-        {
+        public RutinaRepository(GimnasioBD pContext) : base(pContext) { }
 
+        public IList<Rutina> GetByNombre(string cadena)
+        {
+            return this.iDbContext.Rutinas.Where(unaRutina => unaRutina.Nombre.Contains(cadena));
         }
     }
+
 }

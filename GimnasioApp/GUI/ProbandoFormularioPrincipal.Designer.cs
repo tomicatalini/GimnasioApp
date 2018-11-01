@@ -33,6 +33,7 @@
             this.panelLateral = new System.Windows.Forms.Panel();
             this.btnSalir = new System.Windows.Forms.Button();
             this.flowMenu = new System.Windows.Forms.FlowLayoutPanel();
+            this.panelIncio = new System.Windows.Forms.FlowLayoutPanel();
             this.btnInicio = new System.Windows.Forms.Button();
             this.imageListMenu = new System.Windows.Forms.ImageList(this.components);
             this.panelSocio = new System.Windows.Forms.FlowLayoutPanel();
@@ -43,12 +44,14 @@
             this.btnBajaSocio = new System.Windows.Forms.Button();
             this.btnAltaFicha = new System.Windows.Forms.Button();
             this.btnModificarFicha = new System.Windows.Forms.Button();
+            this.panelCuota = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnCuota = new System.Windows.Forms.Button();
+            this.panelRutina = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnRutina = new System.Windows.Forms.Button();
             this.panelProductos = new System.Windows.Forms.FlowLayoutPanel();
             this.btnProducto = new System.Windows.Forms.Button();
             this.btnComprarProd = new System.Windows.Forms.Button();
             this.btnVenderProd = new System.Windows.Forms.Button();
-            this.panelRutina = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnRutina = new System.Windows.Forms.Button();
             this.panelGestion = new System.Windows.Forms.FlowLayoutPanel();
             this.btnGestion = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
@@ -56,9 +59,11 @@
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.panelLateral.SuspendLayout();
             this.flowMenu.SuspendLayout();
+            this.panelIncio.SuspendLayout();
             this.panelSocio.SuspendLayout();
-            this.panelProductos.SuspendLayout();
+            this.panelCuota.SuspendLayout();
             this.panelRutina.SuspendLayout();
+            this.panelProductos.SuspendLayout();
             this.panelGestion.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.SuspendLayout();
@@ -101,15 +106,25 @@
             // 
             this.flowMenu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.flowMenu.Controls.Add(this.btnInicio);
+            this.flowMenu.Controls.Add(this.panelIncio);
             this.flowMenu.Controls.Add(this.panelSocio);
-            this.flowMenu.Controls.Add(this.panelProductos);
+            this.flowMenu.Controls.Add(this.panelCuota);
             this.flowMenu.Controls.Add(this.panelRutina);
+            this.flowMenu.Controls.Add(this.panelProductos);
             this.flowMenu.Controls.Add(this.panelGestion);
             this.flowMenu.Location = new System.Drawing.Point(3, 123);
             this.flowMenu.Name = "flowMenu";
             this.flowMenu.Size = new System.Drawing.Size(226, 466);
             this.flowMenu.TabIndex = 0;
+            // 
+            // panelIncio
+            // 
+            this.panelIncio.Controls.Add(this.btnInicio);
+            this.panelIncio.Location = new System.Drawing.Point(2, 2);
+            this.panelIncio.Margin = new System.Windows.Forms.Padding(2);
+            this.panelIncio.Name = "panelIncio";
+            this.panelIncio.Size = new System.Drawing.Size(220, 50);
+            this.panelIncio.TabIndex = 0;
             // 
             // btnInicio
             // 
@@ -132,7 +147,6 @@
             this.btnInicio.Text = "Inicio";
             this.btnInicio.UseVisualStyleBackColor = false;
             this.btnInicio.Click += new System.EventHandler(this.ActivarBotonMenu_Click);
-            this.btnInicio.Leave += new System.EventHandler(this.LimpiarFormatoBoton_Leave);
             // 
             // imageListMenu
             // 
@@ -148,6 +162,8 @@
             this.imageListMenu.Images.SetKeyName(7, "producto2.png");
             this.imageListMenu.Images.SetKeyName(8, "rutina2.png");
             this.imageListMenu.Images.SetKeyName(9, "socio2.png");
+            this.imageListMenu.Images.SetKeyName(10, "cheque2.png");
+            this.imageListMenu.Images.SetKeyName(11, "cheque.png");
             // 
             // panelSocio
             // 
@@ -184,6 +200,7 @@
             this.btnSocio.TabIndex = 4;
             this.btnSocio.Text = "Socio";
             this.btnSocio.UseVisualStyleBackColor = false;
+            this.btnSocio.Click += new System.EventHandler(this.ActivarBotonMenu_Click);
             // 
             // btnAltaSocio
             // 
@@ -285,71 +302,35 @@
             this.btnModificarFicha.Text = "Modificar Ficha Medica";
             this.btnModificarFicha.UseVisualStyleBackColor = false;
             // 
-            // panelProductos
+            // panelCuota
             // 
-            this.panelProductos.Controls.Add(this.btnProducto);
-            this.panelProductos.Controls.Add(this.btnComprarProd);
-            this.panelProductos.Controls.Add(this.btnVenderProd);
-            this.panelProductos.Location = new System.Drawing.Point(2, 110);
-            this.panelProductos.Margin = new System.Windows.Forms.Padding(2);
-            this.panelProductos.Name = "panelProductos";
-            this.panelProductos.Size = new System.Drawing.Size(220, 50);
-            this.panelProductos.TabIndex = 0;
+            this.panelCuota.Controls.Add(this.btnCuota);
+            this.panelCuota.Location = new System.Drawing.Point(2, 110);
+            this.panelCuota.Margin = new System.Windows.Forms.Padding(2);
+            this.panelCuota.Name = "panelCuota";
+            this.panelCuota.Size = new System.Drawing.Size(220, 50);
+            this.panelCuota.TabIndex = 0;
             // 
-            // btnProducto
+            // btnCuota
             // 
-            this.btnProducto.BackColor = System.Drawing.Color.White;
-            this.btnProducto.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnProducto.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnProducto.FlatAppearance.BorderSize = 0;
-            this.btnProducto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(51)))));
-            this.btnProducto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(51)))));
-            this.btnProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProducto.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProducto.ImageKey = "producto.png";
-            this.btnProducto.ImageList = this.imageListMenu;
-            this.btnProducto.Location = new System.Drawing.Point(0, 0);
-            this.btnProducto.Margin = new System.Windows.Forms.Padding(0);
-            this.btnProducto.Name = "btnProducto";
-            this.btnProducto.Size = new System.Drawing.Size(220, 50);
-            this.btnProducto.TabIndex = 6;
-            this.btnProducto.Text = "Productos";
-            this.btnProducto.UseVisualStyleBackColor = false;
-            this.btnProducto.Click += new System.EventHandler(this.ActivarBotonMenu_Click);
-            this.btnProducto.Enter += new System.EventHandler(this.btnProducto_click);
-            this.btnProducto.Leave += new System.EventHandler(this.LimpiarFormatoBoton_Leave);
-            // 
-            // btnComprarProd
-            // 
-            this.btnComprarProd.BackColor = System.Drawing.Color.White;
-            this.btnComprarProd.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnComprarProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnComprarProd.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnComprarProd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnComprarProd.Location = new System.Drawing.Point(18, 54);
-            this.btnComprarProd.Margin = new System.Windows.Forms.Padding(18, 4, 1, 1);
-            this.btnComprarProd.Name = "btnComprarProd";
-            this.btnComprarProd.Size = new System.Drawing.Size(200, 30);
-            this.btnComprarProd.TabIndex = 21;
-            this.btnComprarProd.Text = "Comprar Productos";
-            this.btnComprarProd.UseVisualStyleBackColor = false;
-            this.btnComprarProd.Click += new System.EventHandler(this.btnComprarProd_Click);
-            // 
-            // btnVenderProd
-            // 
-            this.btnVenderProd.BackColor = System.Drawing.Color.White;
-            this.btnVenderProd.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnVenderProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVenderProd.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVenderProd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVenderProd.Location = new System.Drawing.Point(18, 87);
-            this.btnVenderProd.Margin = new System.Windows.Forms.Padding(18, 2, 1, 1);
-            this.btnVenderProd.Name = "btnVenderProd";
-            this.btnVenderProd.Size = new System.Drawing.Size(200, 30);
-            this.btnVenderProd.TabIndex = 22;
-            this.btnVenderProd.Text = "Vender Productos";
-            this.btnVenderProd.UseVisualStyleBackColor = false;
+            this.btnCuota.BackColor = System.Drawing.Color.White;
+            this.btnCuota.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCuota.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnCuota.FlatAppearance.BorderSize = 0;
+            this.btnCuota.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(51)))));
+            this.btnCuota.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(51)))));
+            this.btnCuota.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCuota.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCuota.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCuota.ImageKey = "cheque.png";
+            this.btnCuota.ImageList = this.imageListMenu;
+            this.btnCuota.Location = new System.Drawing.Point(0, 0);
+            this.btnCuota.Margin = new System.Windows.Forms.Padding(0);
+            this.btnCuota.Name = "btnCuota";
+            this.btnCuota.Size = new System.Drawing.Size(220, 50);
+            this.btnCuota.TabIndex = 6;
+            this.btnCuota.Text = "Cuota";
+            this.btnCuota.UseVisualStyleBackColor = false;
             // 
             // panelRutina
             // 
@@ -381,10 +362,79 @@
             this.btnRutina.Text = "Rutina";
             this.btnRutina.UseVisualStyleBackColor = false;
             // 
+            // panelProductos
+            // 
+            this.panelProductos.Controls.Add(this.btnProducto);
+            this.panelProductos.Controls.Add(this.btnComprarProd);
+            this.panelProductos.Controls.Add(this.btnVenderProd);
+            this.panelProductos.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.panelProductos.Location = new System.Drawing.Point(2, 218);
+            this.panelProductos.Margin = new System.Windows.Forms.Padding(2);
+            this.panelProductos.Name = "panelProductos";
+            this.panelProductos.Size = new System.Drawing.Size(220, 50);
+            this.panelProductos.TabIndex = 0;
+            this.panelProductos.WrapContents = false;
+            // 
+            // btnProducto
+            // 
+            this.btnProducto.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnProducto.BackColor = System.Drawing.Color.White;
+            this.btnProducto.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnProducto.FlatAppearance.BorderSize = 0;
+            this.btnProducto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(51)))));
+            this.btnProducto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(51)))));
+            this.btnProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProducto.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProducto.ImageKey = "producto.png";
+            this.btnProducto.ImageList = this.imageListMenu;
+            this.btnProducto.Location = new System.Drawing.Point(0, 0);
+            this.btnProducto.Margin = new System.Windows.Forms.Padding(0, 0, 0, 2);
+            this.btnProducto.Name = "btnProducto";
+            this.btnProducto.Size = new System.Drawing.Size(220, 50);
+            this.btnProducto.TabIndex = 6;
+            this.btnProducto.Text = "Productos";
+            this.btnProducto.UseVisualStyleBackColor = false;
+            this.btnProducto.Click += new System.EventHandler(this.ActivarBotonMenu_Click);
+            this.btnProducto.Enter += new System.EventHandler(this.btnProducto_click);
+            // 
+            // btnComprarProd
+            // 
+            this.btnComprarProd.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnComprarProd.BackColor = System.Drawing.Color.White;
+            this.btnComprarProd.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnComprarProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnComprarProd.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnComprarProd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnComprarProd.Location = new System.Drawing.Point(18, 54);
+            this.btnComprarProd.Margin = new System.Windows.Forms.Padding(2);
+            this.btnComprarProd.Name = "btnComprarProd";
+            this.btnComprarProd.Size = new System.Drawing.Size(200, 30);
+            this.btnComprarProd.TabIndex = 21;
+            this.btnComprarProd.Text = "Comprar Productos";
+            this.btnComprarProd.UseVisualStyleBackColor = false;
+            this.btnComprarProd.Click += new System.EventHandler(this.btnComprarProd_Click);
+            // 
+            // btnVenderProd
+            // 
+            this.btnVenderProd.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnVenderProd.BackColor = System.Drawing.Color.White;
+            this.btnVenderProd.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnVenderProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVenderProd.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVenderProd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVenderProd.Location = new System.Drawing.Point(18, 88);
+            this.btnVenderProd.Margin = new System.Windows.Forms.Padding(2);
+            this.btnVenderProd.Name = "btnVenderProd";
+            this.btnVenderProd.Size = new System.Drawing.Size(200, 30);
+            this.btnVenderProd.TabIndex = 22;
+            this.btnVenderProd.Text = "Vender Productos";
+            this.btnVenderProd.UseVisualStyleBackColor = false;
+            // 
             // panelGestion
             // 
             this.panelGestion.Controls.Add(this.btnGestion);
-            this.panelGestion.Location = new System.Drawing.Point(2, 218);
+            this.panelGestion.Location = new System.Drawing.Point(2, 272);
             this.panelGestion.Margin = new System.Windows.Forms.Padding(2);
             this.panelGestion.Name = "panelGestion";
             this.panelGestion.Size = new System.Drawing.Size(220, 50);
@@ -424,7 +474,8 @@
             // 
             // label1
             // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(0, 0);
@@ -436,11 +487,14 @@
             // 
             // panelContenedor
             // 
-            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenedor.Location = new System.Drawing.Point(232, 0);
-            this.panelContenedor.Margin = new System.Windows.Forms.Padding(2);
+            this.panelContenedor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelContenedor.BackColor = System.Drawing.Color.White;
+            this.panelContenedor.Location = new System.Drawing.Point(245, 10);
+            this.panelContenedor.Margin = new System.Windows.Forms.Padding(10, 1, 0, 0);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(952, 661);
+            this.panelContenedor.Size = new System.Drawing.Size(939, 651);
             this.panelContenedor.TabIndex = 1;
             this.panelContenedor.Click += new System.EventHandler(this.btnInicio_click);
             // 
@@ -457,9 +511,11 @@
             this.Text = "ProbandoFormularioPrincipal";
             this.panelLateral.ResumeLayout(false);
             this.flowMenu.ResumeLayout(false);
+            this.panelIncio.ResumeLayout(false);
             this.panelSocio.ResumeLayout(false);
-            this.panelProductos.ResumeLayout(false);
+            this.panelCuota.ResumeLayout(false);
             this.panelRutina.ResumeLayout(false);
+            this.panelProductos.ResumeLayout(false);
             this.panelGestion.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -492,5 +548,8 @@
         private System.Windows.Forms.Button btnRutina;
         private System.Windows.Forms.FlowLayoutPanel panelGestion;
         private System.Windows.Forms.Button btnGestion;
+        private System.Windows.Forms.FlowLayoutPanel panelCuota;
+        private System.Windows.Forms.Button btnCuota;
+        private System.Windows.Forms.FlowLayoutPanel panelIncio;
     }
 }
