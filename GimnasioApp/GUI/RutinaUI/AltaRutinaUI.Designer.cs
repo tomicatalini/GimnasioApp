@@ -31,7 +31,6 @@
             this.panelBanner = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.panelDias = new System.Windows.Forms.FlowLayoutPanel();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panelBanner.SuspendLayout();
@@ -73,21 +72,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // panelDias
-            // 
-            this.panelDias.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelDias.AutoScroll = true;
-            this.panelDias.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panelDias.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.panelDias.Location = new System.Drawing.Point(-1, 82);
-            this.panelDias.Name = "panelDias";
-            this.panelDias.Size = new System.Drawing.Size(855, 371);
-            this.panelDias.TabIndex = 2;
-            this.panelDias.WrapContents = false;
-            this.panelDias.SizeChanged += new System.EventHandler(this.panelDias_SizeChanged);
-            // 
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -115,7 +99,6 @@
             this.ClientSize = new System.Drawing.Size(853, 486);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.panelDias);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panelBanner);
             this.Name = "AltaRutinaUI";
@@ -130,7 +113,6 @@
         private System.Windows.Forms.Panel panelBanner;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.FlowLayoutPanel panelDias;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
     }

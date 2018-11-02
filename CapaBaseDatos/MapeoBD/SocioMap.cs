@@ -51,9 +51,9 @@ namespace CapaBaseDatos.MapeoBD
                    .IsOptional();
 
             ////Relacion de uno a muchos entre socio y cuotas
-            this.HasMany(unSocio => unSocio.Cuotas)
-                .WithRequired(unaCuota => unaCuota.Socio)
-                    .HasForeignKey<int>(unaCuota => unaCuota.SocioDNI);
+            //this.HasMany(unSocio => unSocio.Cuotas)
+            //    .WithRequired(unaCuota => unaCuota.Socio)
+            //        .HasForeignKey<int>(unaCuota => unaCuota.SocioDNI);
 
             ////Relacion de muchos a muchos entre socio y rutinas. 
             ////Se hace una tabla intermedia llamada "socioRutina" con las columas SocioDNI y rutinaId.

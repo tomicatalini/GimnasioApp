@@ -19,6 +19,11 @@ namespace CapaDominio.ModuloGimnasio
         public virtual Socio Socio { get; set; }
         public virtual IList<Pago> Pagos { get; set; }
 
+        public Cuota()
+        {
+            
+        }
+
         public Cuota(DateTime pFecEmision, string pDescripcion, float pMonto, string pMes, int pAño, Socio unSocio)
         {
 

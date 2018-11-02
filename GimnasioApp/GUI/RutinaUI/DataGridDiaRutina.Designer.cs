@@ -30,15 +30,15 @@
         {
             this.lblDia = new System.Windows.Forms.Label();
             this.dataGridDia = new System.Windows.Forms.DataGridView();
-            this.lblTextoDia = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.musculo = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.ejercicio = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.serie = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.repeticion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descanso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.observacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblTextoDia = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDia)).BeginInit();
             this.SuspendLayout();
@@ -78,33 +78,6 @@
             this.dataGridDia.TabIndex = 2;
             this.dataGridDia.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dataGridDia_RowsAdded);
             // 
-            // lblTextoDia
-            // 
-            this.lblTextoDia.AutoSize = true;
-            this.lblTextoDia.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTextoDia.Location = new System.Drawing.Point(51, 25);
-            this.lblTextoDia.Name = "lblTextoDia";
-            this.lblTextoDia.Size = new System.Drawing.Size(28, 21);
-            this.lblTextoDia.TabIndex = 3;
-            this.lblTextoDia.Text = "01";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(184, 24);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(218, 21);
-            this.textBox1.TabIndex = 4;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(85, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 21);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "-  Nombre:";
-            // 
             // musculo
             // 
             this.musculo.HeaderText = "Musculo";
@@ -143,6 +116,33 @@
             this.observacion.HeaderText = "Observaciones";
             this.observacion.Name = "observacion";
             // 
+            // lblTextoDia
+            // 
+            this.lblTextoDia.AutoSize = true;
+            this.lblTextoDia.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTextoDia.Location = new System.Drawing.Point(51, 25);
+            this.lblTextoDia.Name = "lblTextoDia";
+            this.lblTextoDia.Size = new System.Drawing.Size(28, 21);
+            this.lblTextoDia.TabIndex = 3;
+            this.lblTextoDia.Text = "01";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(184, 24);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(218, 21);
+            this.textBox1.TabIndex = 4;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(85, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(93, 21);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "-  Nombre:";
+            // 
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -168,7 +168,7 @@
             this.Controls.Add(this.dataGridDia);
             this.Controls.Add(this.lblDia);
             this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(0);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "DataGridDiaRutina";
             this.Size = new System.Drawing.Size(581, 118);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDia)).EndInit();

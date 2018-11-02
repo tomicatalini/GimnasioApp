@@ -53,6 +53,11 @@ namespace CapaBaseDatos.MapeoBD
                 .WithRequired(unPago => unPago.Cuota)
                     .HasForeignKey(unPago => unPago.NroCuota);
 
+            this.HasRequired(unaCuota => unaCuota.Socio)
+                .WithMany(unSocio => unSocio.Cuotas)
+                    .HasForeignKey(unaCuota => unaCuota.SocioDNI);
+                
+
         }
     }
 }
