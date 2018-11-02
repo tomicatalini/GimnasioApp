@@ -18,9 +18,9 @@ namespace CapaNegocio.Controladores
             this.iUnitOfWork = new UnitOfWork(new GimnasioBD());
         }
 
-        public void NuevoEjercicio(string nombre) // constructor de ejercicio
+        public void NuevoEjercicio(string nombre, Musculo musculo) // constructor de ejercicio
         {
-            var unEjercicio = new Ejercicio(nombre); // instanciacion de nuevo ejercicio
+            var unEjercicio = new Ejercicio(nombre, musculo); // instanciacion de nuevo ejercicio
             this.iUnitOfWork.EjercicioRepository.Add(unEjercicio); // agregarEjercicio a listEjercicios
         }
 

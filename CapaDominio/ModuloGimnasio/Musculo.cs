@@ -9,7 +9,8 @@ namespace CapaDominio.ModuloGimnasio
         public string Nombre { get; set; }
 
         public virtual IList<Ejercicio> Ejercicios { get; set; }
-        
+        public virtual IList<LineaEjercicio> LineasEjercicio { get; set; }
+
         public Musculo() { }
 
         public Musculo(string nombre)

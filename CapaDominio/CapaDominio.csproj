@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ModuloComercio\GastoAdministrativo.cs" />
+    <Compile Include="ModuloComercio\LineaGastoAdministrativo.cs" />
     <Compile Include="ModuloComercio\LineaMovimiento.cs" />
     <Compile Include="ModuloComercio\Movimiento.cs" />
     <Compile Include="ModuloComercio\Producto.cs" />

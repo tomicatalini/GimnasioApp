@@ -1,5 +1,4 @@
-﻿
-namespace CapaDominio.ModuloComercio
+﻿namespace CapaDominio.ModuloComercio
 {
     public class LineaMovimiento
     {

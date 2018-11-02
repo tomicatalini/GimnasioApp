@@ -56,6 +56,7 @@
     <Compile Include="Controladores\ControladorGastoAdministrativo.cs" />
     <Compile Include="Controladores\ControladorGestion.cs" />
     <Compile Include="Controladores\ControladorLimitacionFisica.cs" />
+    <Compile Include="Controladores\ControladorLineaGastoAdministrativo.cs" />
     <Compile Include="Controladores\ControladorLineaMovimiento.cs" />
     <Compile Include="Controladores\ControladorMedicacion.cs" />
     <Compile Include="Controladores\ControladorMovimiento.cs" />
