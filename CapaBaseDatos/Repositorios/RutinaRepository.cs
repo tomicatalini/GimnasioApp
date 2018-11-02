@@ -11,10 +11,10 @@ namespace CapaBaseDatos.Repositorios
     {
         public RutinaRepository(GimnasioBD pContext) : base(pContext) { }
 
-        public IList<Rutina> GetByNombre(string cadena)
-        {
-            return this.iDbContext.Rutinas.Where(unaRutina => unaRutina.Nombre.Contains(cadena));
-        }
+        //public IList<Rutina> GetByNombre(string cadena)
+        //{
+        //    return this.iDbContext.Rutinas.(unaRutina => unaRutina.Nombre.Contains(cadena));
+        //}
     }
 
 }

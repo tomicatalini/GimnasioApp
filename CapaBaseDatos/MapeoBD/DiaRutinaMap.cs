@@ -3,15 +3,15 @@ using CapaDominio.ModuloGimnasio;
 
 namespace CapaBaseDatos.MapeoBD
 {
-    class DetalleRutinaMap : EntityTypeConfiguration<DetalleRutina>
+    class DiaRutinaMap : EntityTypeConfiguration<DiaRutina>
     {
-        public DetalleRutinaMap()
+        public DiaRutinaMap()
         {
             //Nombre de tabla en base de datos
             this.ToTable("DetalleRutina");
 
             //conf. clave primaria: nombre, autoincrement y not null
-            this.HasKey(unDetalle => unDetalle.Id)
+            this.HasKey(DiaRutina => DiaRutina.Id)
                 .Property(unDetalle => unDetalle.Id)
                     .HasColumnName("detalleId")
                     .IsRequired();
@@ -21,15 +21,10 @@ namespace CapaBaseDatos.MapeoBD
                     .HasColumnName("dia")
                     .IsRequired();
 
-            //conf. propiedad descanso: nombre y not null
-            this.Property(unDetalle => unDetalle.Descanso)
-                    .HasColumnName("descanso")
-                    .IsRequired();
-
-            //conf. propiedad dia: nombre y not null
-            this.Property(unDetalle => unDetalle.SeriesxRepeticiones)
-                    .HasColumnName("seriexRepeticion")
-                    .IsRequired();
+            //Relacion de agregacion entre DiaRutina y LineaEjercicio
+            this.HasMany(DiaRutina => DiaRutina.LineasEjercicio)
+                .WithRequired(LineaEjercicio => LineaEjercicio.DiaRutina) //cambiar
+                    .HasForeignKey(LineaEjercicio => LineaEjercicio.DiaRutinaId);
         }
     }
 }

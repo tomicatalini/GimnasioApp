@@ -52,9 +52,10 @@ namespace CapaNegocio.Controladores
             return unaRutina;
         }
 
-        public IList<Rutina> BuscarRutina(string nombre)
+        public List<Rutina> BuscarRutina(string nombre)
         {
-            return this.iUnitOfWork.RutinaRepository.GetByNombre(nombre);
+            var lista = this.iUnitOfWork.RutinaRepository.GetAll();
+            return lista.Where(unaRutina => unaRutina.Nombre.Contains(nombre)).ToList();
         }
 
         public void BajaRutina(int rutinaId)

@@ -67,6 +67,7 @@ namespace CapaBaseDatos.Repositorios
         /// <returns>Entidad</returns>
         public virtual TEntity Get(int pId)
         {
+            
             return this.iDbContext.Set<TEntity>().Find(pId);
         }
 

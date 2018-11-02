@@ -19,6 +19,8 @@ namespace CapaDominio.ModuloGimnasio
 
         public virtual IList<LineaEjercicio> LineasEjercicio { get; set; }
 
+
+        public DiaRutina() { }
         /// <summary>
         /// Constructor
         /// </summary>

@@ -29,9 +29,10 @@ namespace CapaBaseDatos
 
         ////Repositorios Rutina
         public DbSet<Rutina> Rutinas { get; set; }
-        public DbSet<DiaRutina> DetallesRutinas {get; set;}
+        public DbSet<DiaRutina> DiasRutinas {get; set;}
         public DbSet<Musculo> Musculos { get; set; }
         public DbSet<Ejercicio> Ejercios { get; set; }
+        public DbSet<LineaEjercicio> LineasEjercicio { get; set; }
 
         ///Repositorios Ficha Medica
         public DbSet<FichaMedica> FichasMedicas { get; set; }
@@ -63,9 +64,10 @@ namespace CapaBaseDatos
 
             ////Modulo Rutinas
             pModelBuilder.Configurations.Add(new RutinaMap());
-            pModelBuilder.Configurations.Add(new DetalleRutinaMap());
+            pModelBuilder.Configurations.Add(new DiaRutinaMap());
             pModelBuilder.Configurations.Add(new MusculoMap());
             pModelBuilder.Configurations.Add(new EjercicioMap());
+            pModelBuilder.Configurations.Add(new LineaEjercicioMap());
 
 
             ////Modulo Ficha Medica

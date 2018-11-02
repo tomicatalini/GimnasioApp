@@ -22,6 +22,11 @@ namespace CapaBaseDatos.MapeoBD
             this.Property(unEjercicio => unEjercicio.Nombre)
                     .HasColumnName("nombre")
                     .IsRequired();
+
+            //Relacion de agregacion entre Ejercicio y LineaEjercicio
+            this.HasMany(unEjercicio => unEjercicio.LineasEjercicio)
+                .WithRequired(lineaEjercicio => lineaEjercicio.Ejercicio)
+                    .HasForeignKey(LineaEjercicio => LineaEjercicio.EjercicioId);
         }
     }
 }

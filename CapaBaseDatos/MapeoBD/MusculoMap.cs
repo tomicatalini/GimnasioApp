@@ -23,15 +23,10 @@ namespace CapaBaseDatos.MapeoBD
                     .HasColumnName("nombre")
                     .IsRequired();
 
-            //relacion de muchos a uno con detalle rutina
-            this.HasMany(unMusculo => unMusculo.DetallesDeRutina)
-                .WithRequired(unDetalle => unDetalle.Musculo)
-                    .HasForeignKey(unDetalle => unDetalle.MusculoId);
-
-            //relacion de muchos a uno con ejercicio
-            this.HasMany(unMusculo => unMusculo.Ejercicios)
-                .WithRequired(unEjercicio => unEjercicio.Musculo)
-                    .HasForeignKey(unEjercicio => unEjercicio.MusculoId);
+            //Relacion de agregacion entre Ejercicio y LineaEjercicio
+            this.HasMany(unMusculo => unMusculo.LineasEjercicio)
+                .WithRequired(lineaEjercicio => lineaEjercicio.Musculo)
+                    .HasForeignKey(LineaEjercicio => LineaEjercicio.MusculoId);
 
         }
     }

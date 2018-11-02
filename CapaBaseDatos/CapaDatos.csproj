@@ -62,12 +62,13 @@
     <Compile Include="MapeoBD\ActividadFisicaMap.cs" />
     <Compile Include="MapeoBD\ContactoEmergenciaMap.cs" />
     <Compile Include="MapeoBD\CuotaMap.cs" />
-    <Compile Include="MapeoBD\DetalleRutinaMap.cs" />
+    <Compile Include="MapeoBD\DiaRutinaMap.cs" />
     <Compile Include="MapeoBD\EjercicioMap.cs" />
     <Compile Include="MapeoBD\EnfermedadMap.cs" />
     <Compile Include="MapeoBD\FichaMedicaMap.cs" />
     <Compile Include="MapeoBD\GastoAdministrativoMap.cs" />
     <Compile Include="MapeoBD\LimitacionFisicaMap.cs" />
+    <Compile Include="MapeoBD\LineaEjercicioMap.cs" />
     <Compile Include="MapeoBD\LineaMovimientoMap.cs" />
     <Compile Include="MapeoBD\MedicamentoMap.cs" />
     <Compile Include="MapeoBD\MovimientoMap.cs" />

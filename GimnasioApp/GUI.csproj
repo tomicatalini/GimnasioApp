@@ -83,6 +83,18 @@
     <Compile Include="GUI\ProductoUI\InventarioProductoUI.Designer.cs">
       <DependentUpon>InventarioProductoUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\RutinaUI\AltaRutinaUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\RutinaUI\AltaRutinaUI.Designer.cs">
+      <DependentUpon>AltaRutinaUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RutinaUI\DataGridDiaRutina.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\RutinaUI\DataGridDiaRutina.Designer.cs">
+      <DependentUpon>DataGridDiaRutina.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\SocioUI\AltaSocioUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +132,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ProductoUI\InventarioProductoUI.resx">
       <DependentUpon>InventarioProductoUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RutinaUI\AltaRutinaUI.resx">
+      <DependentUpon>AltaRutinaUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RutinaUI\DataGridDiaRutina.resx">
+      <DependentUpon>DataGridDiaRutina.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\SocioUI\BaseUI.resx">
       <DependentUpon>BaseUI.cs</DependentUpon>

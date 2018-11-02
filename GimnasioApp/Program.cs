@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using GimnasioApp.GUI;
+using GimnasioApp.GUI.RutinaUI;
 
 namespace GimnasioApp
 {
@@ -17,8 +17,10 @@ namespace GimnasioApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PantallaCarga());
-            Application.Run(new ProbandoFormularioPrincipal());
+            //Application.Run(new PantallaCarga());
+            //Application.Run(new ProbandoFormularioPrincipal());
+
+            Application.Run(new AltaRutinaUI());
         }
     }
 }

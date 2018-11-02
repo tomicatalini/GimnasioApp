@@ -34,9 +34,9 @@ namespace CapaBaseDatos.MapeoBD
                     .IsRequired();
 
             //relacion de uno a muchos con detalle rutina            
-            this.HasMany(unaRutina => unaRutina.DetallesRutina)
-                .WithRequired(unDetalle => unDetalle.Rutina)
-                    .HasForeignKey(unDetalle => unDetalle.RutinaId);
+            this.HasMany(unaRutina => unaRutina.DiasRutina)
+                .WithRequired(DiaRutina => DiaRutina.Rutina)
+                    .HasForeignKey(DiaRutina => DiaRutina.RutinaId);
         }
     }
 }
