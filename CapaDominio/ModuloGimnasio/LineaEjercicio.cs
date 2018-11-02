@@ -7,10 +7,10 @@ namespace CapaDominio.ModuloGimnasio
         public int Id { get; set; }
         public int Linea { get; set; }
 
-        public virtual int MusculoId { get; set; }
+        //public virtual int MusculoId { get; set; }
         public virtual Musculo Musculo { get; set; }
 
-        public virtual int EjercicioId { get; set; }
+        //public virtual int EjercicioId { get; set; }
         public virtual Ejercicio Ejercicio { get; set; }
 
         public virtual int DiaRutinaId { get; set; }
@@ -24,10 +24,10 @@ namespace CapaDominio.ModuloGimnasio
 
         public LineaEjercicio(Musculo musculo, Ejercicio ejercicio, string serieRepeticion, int descanso)
         {
-            this.EjercicioId = ejercicio.Id;
+            //this.EjercicioId = ejercicio.Id;
             this.Ejercicio = ejercicio;
 
-            this.MusculoId = musculo.Id;
+            //this.MusculoId = musculo.Id;
             this.Musculo = musculo;
 
             this.SerieRepeticion = serieRepeticion;
