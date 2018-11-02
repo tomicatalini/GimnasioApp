@@ -22,7 +22,7 @@ namespace GimnasioApp
             //Application.Run(new ProbandoFormularioPrincipal());
 
             ///Application.Run(new AltaRutinaUI());
-            ///Application.Run(new AltaGastoAdministrativoUI());
+            Application.Run(new AltaGastoAdministrativoUI());
         }
     }
 }

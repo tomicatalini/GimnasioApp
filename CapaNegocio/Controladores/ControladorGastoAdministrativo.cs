@@ -13,9 +13,9 @@ namespace CapaNegocio.Controladores
             this.iUnitOfWork = new UnitOfWork(new GimnasioBD());
         }
 
-        public void AltaGastoAdministrativo(int pId, int pCantidad, string pDescripcion, float pPrecioUnitario, DateTime pFecha)
+        public void AltaGastoAdministrativo(int pId, DateTime pFecha)
         {
-            var unGastoAdministrativo = new GastoAdministrativo(pId, pCantidad, pDescripcion, pPrecioUnitario, pFecha);
+            var unGastoAdministrativo = new GastoAdministrativo(pId, pFecha);
 
             this.iUnitOfWork.GastoAdministrativoRepository.Add(unGastoAdministrativo);
             
