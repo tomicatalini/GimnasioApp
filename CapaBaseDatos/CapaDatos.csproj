@@ -81,6 +81,7 @@
     <Compile Include="MapeoBD\TipoProductoMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositorios\CuotaRepository.cs" />
+    <Compile Include="Repositorios\DiaRutinaRepository.cs" />
     <Compile Include="Repositorios\EjercicioRepository.cs" />
     <Compile Include="Repositorios\GastoAdministrativoRepository.cs" />
     <Compile Include="Repositorios\HistorialMedicoRepository.cs" />
@@ -97,6 +98,7 @@
     <Compile Include="Repositorios\InterfacesRepositorios\ISocioRepository.cs" />
     <Compile Include="Repositorios\InterfacesRepositorios\ITipoProductoRepository.cs" />
     <Compile Include="Repositorios\InterfacesRepositorios\IUnitIOfWork.cs" />
+    <Compile Include="Repositorios\LineaEjercicioRepository.cs" />
     <Compile Include="Repositorios\MovimientoRepository.cs" />
     <Compile Include="Repositorios\MusculoRepository.cs" />
     <Compile Include="Repositorios\PagoRepository.cs" />
