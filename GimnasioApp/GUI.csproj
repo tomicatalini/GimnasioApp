@@ -53,6 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GUI\GastoAdministrativoUI\AltaGastoAdministrativoUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GastoAdministrativoUI\AltaGastoAdministrativoUI.Designer.cs">
+      <DependentUpon>AltaGastoAdministrativoUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\InicioUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +127,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\GastoAdministrativoUI\AltaGastoAdministrativoUI.resx">
+      <DependentUpon>AltaGastoAdministrativoUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\ProbandoFormularioPrincipal.resx">
       <DependentUpon>ProbandoFormularioPrincipal.cs</DependentUpon>
     </EmbeddedResource>

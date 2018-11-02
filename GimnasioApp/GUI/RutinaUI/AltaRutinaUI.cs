@@ -25,19 +25,19 @@ namespace GimnasioApp.GUI.RutinaUI
 
         public void AgregarDataGridDias()
         {
-            
-            //get a reference to the previous existent 
-            RowStyle temp = this.tableLayoutPanel1.RowStyles[this.tableLayoutPanel1.RowCount - 1];
+
+            //get a reference to the previous existent
+            //RowStyle temp = this.tableLayoutPanel1.RowStyles[this.tableLayoutPanel1.RowCount - 1];
             //increase panel rows count by one
-            this.tableLayoutPanel1.RowCount++;
+            //this.tableLayoutPanel1.RowCount++;
             //add a new RowStyle as a copy of the previous one
-            this.tableLayoutPanel1.RowStyles.Add(new RowStyle(temp.SizeType, temp.Height));
+            //this.tableLayoutPanel1.RowStyles.Add(new RowStyle(temp.SizeType, temp.Height));
             //add your three controls
-            var dataGrid = new DataGridDiaRutina();
-            dataGrid.Anchor = AnchorStyles.None;
-            dataGrid.AutoSize = true;
-            this.tableLayoutPanel1.Controls.Add(dataGrid , 0, this.tableLayoutPanel1.RowCount - 1);
-            
+            //var dataGrid = new DataGridDiaRutina();
+            //dataGrid.Anchor = AnchorStyles.None;
+            //dataGrid.AutoSize = true;
+            //this.tableLayoutPanel1.Controls.Add(dataGrid, 0, this.tableLayoutPanel1.RowCount - 1);
+
             //panelDias.Controls.Add(dataGrid);
 
             //this.tableLayoutPanel1.RowCount++;

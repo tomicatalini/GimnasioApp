@@ -18,21 +18,6 @@ namespace CapaBaseDatos.MapeoBD
                     .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity)
                     .IsRequired();
 
-            //conf. propiedad cantidad: nombre y not null
-            this.Property(unGasto => unGasto.Cantidad)
-                    .HasColumnName("cantidad")
-                    .IsRequired();
-
-            //conf. propiedad descripcion: nombre y not null
-            this.Property(unGasto => unGasto.Descripcion)
-                    .HasColumnName("descripcion")
-                    .IsRequired();
-
-            //conf. propiedad precioUnitario: nombre y not null
-            this.Property(unGasto => unGasto.PrecioUnitario)
-                    .HasColumnName("precioUnitario")
-                    .IsRequired();
-
             //conf. propiedad fecha: nombre y not null
             this.Property(unGasto => unGasto.Fecha)
                     .HasColumnName("fecha")

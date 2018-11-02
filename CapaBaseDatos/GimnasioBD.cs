@@ -29,7 +29,7 @@ namespace CapaBaseDatos
 
         ////Repositorios Rutina
         public DbSet<Rutina> Rutinas { get; set; }
-        public DbSet<DiaRutina> DiasRutinas {get; set;}
+        public DbSet<DiaRutina> DiasRutinas { get; set; }
         public DbSet<Musculo> Musculos { get; set; }
         public DbSet<Ejercicio> Ejercios { get; set; }
         public DbSet<LineaEjercicio> LineasEjercicio { get; set; }
@@ -38,10 +38,10 @@ namespace CapaBaseDatos
         public DbSet<FichaMedica> FichasMedicas { get; set; }
         public DbSet<ActividadFisica> ActividadesFisicas { get; set; }
         public DbSet<ContactoEmergencia> ContactosEmergencia { get; set; }
-        public DbSet<Enfermedad> Enfermedades {get; set;}
-        public DbSet<LimitacionFisica> LimitacionesFisicas {get; set;}
-        public DbSet<Medicacion> Medicamentos {get; set;}
-        public DbSet<Operacion> Operaciones {get; set;}
+        public DbSet<Enfermedad> Enfermedades { get; set; }
+        public DbSet<LimitacionFisica> LimitacionesFisicas { get; set; }
+        public DbSet<Medicacion> Medicamentos { get; set; }
+        public DbSet<Operacion> Operaciones { get; set; }
 
         ////Repositorios Movimiento
         public DbSet<Movimiento> Movimientos { get; set; }
@@ -51,6 +51,8 @@ namespace CapaBaseDatos
 
         ////Repositorio Gasto Administrativo
         public DbSet<GastoAdministrativo> GastosAdministrativos { get; set; }
+        public DbSet<LineaGastoAdministrativo> LineasGastoAdministrativo {get; set; }
+
 
         //Configuracion de mapeo
         protected override void OnModelCreating(DbModelBuilder pModelBuilder)
@@ -87,6 +89,7 @@ namespace CapaBaseDatos
 
             ////Gasto Administrativo
             pModelBuilder.Configurations.Add(new GastoAdministrativoMap());
+            pModelBuilder.Configurations.Add(new LineaGastoAdministrativoMap());
 
             base.OnModelCreating(pModelBuilder);
         }

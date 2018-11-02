@@ -69,6 +69,7 @@
     <Compile Include="MapeoBD\GastoAdministrativoMap.cs" />
     <Compile Include="MapeoBD\LimitacionFisicaMap.cs" />
     <Compile Include="MapeoBD\LineaEjercicioMap.cs" />
+    <Compile Include="MapeoBD\LineaGastoAdministrativoMap.cs" />
     <Compile Include="MapeoBD\LineaMovimientoMap.cs" />
     <Compile Include="MapeoBD\MedicamentoMap.cs" />
     <Compile Include="MapeoBD\MovimientoMap.cs" />
