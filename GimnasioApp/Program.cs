@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GimnasioApp.GUI.RutinaUI;
+using GimnasioApp.GUI.GastoAdministrativoUI;
 
 namespace GimnasioApp
 {
@@ -20,7 +21,8 @@ namespace GimnasioApp
             //Application.Run(new PantallaCarga());
             //Application.Run(new ProbandoFormularioPrincipal());
 
-            Application.Run(new AltaRutinaUI());
+            ///Application.Run(new AltaRutinaUI());
+            ///Application.Run(new AltaGastoAdministrativoUI());
         }
     }
 }

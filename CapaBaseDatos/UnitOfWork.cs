@@ -31,6 +31,7 @@ namespace CapaBaseDatos
             this.ProductoRepository = new ProductoRepository(this.iDbContext);
             this.HistorialMedicoRepository = new HistorialMedicoRepository(this.iDbContext);
             this.TipoProductoRepository = new TipoProductoRepository(this.iDbContext);
+
         }
 
         public ISocioRepository SocioRepository
