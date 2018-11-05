@@ -21,5 +21,10 @@ namespace CapaBaseDatos.Repositorios
         {
             return this.iDbContext.Socios.Where(unSocio => unSocio.Activo).ToList();
         }
+
+        //public ilist<cuota> getcuotas()
+        //{
+            
+        //}
     }
 }
