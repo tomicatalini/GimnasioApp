@@ -20,7 +20,7 @@ namespace CapaNegocio.Controladores
 
         public void NuevoEjercicio(string nombre) // constructor de ejercicio
         {
-            var unEjercicio = new Ejercicio(nombre); // instanciacion de nuevo ejercicio
+            var unEjercicio = new Ejercicio(); // instanciacion de nuevo ejercicio
             this.iUnitOfWork.EjercicioRepository.Add(unEjercicio); // agregarEjercicio a listEjercicios
         }
 
@@ -84,6 +84,19 @@ namespace CapaNegocio.Controladores
             unSocio.Rutinas.Add(unaRutina);
            // unaRutina.Socios.Add(unSocio);
         }
+
+        public List<Musculo> GetMusulos()
+        {
+            List<Musculo> lista = this.iUnitOfWork.MusculoRepository.GetAll().ToList();
+            return lista;
+        }
+
+        public List<Ejercicio> GetEjercicios()
+        {
+            List<Ejercicio> lista = this.iUnitOfWork.EjercicioRepository.GetAll().ToList();
+            return lista;
+        }
+        
        
     }
 }
