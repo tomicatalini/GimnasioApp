@@ -17,5 +17,6 @@ namespace GimnasioApp.GUI.GastoAdministrativoUI
             InitializeComponent();
         }
 
+ 
     }
 }

@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.ComponentModel;
 using CapaDominio.ModuloGimnasio;
 using CapaBaseDatos;
 
@@ -59,6 +57,11 @@ namespace CapaNegocio.Controladores
             return this.iUnitOfWork.SocioRepository.GetSociosByString(pApellido);
         }
 
+        /// <summary>
+        /// Devuelve las cuotas pertenecientes a un Socio.
+        /// </summary>
+        /// <param name="dniSocio"></param>
+        /// <returns></returns>
         public IList<Cuota> GetCuotasSocio(int dniSocio)
         {
             return this.GetSocioByDni(dniSocio).Cuotas;

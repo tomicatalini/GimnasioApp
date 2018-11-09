@@ -53,7 +53,6 @@ namespace CapaBaseDatos
         public DbSet<GastoAdministrativo> GastosAdministrativos { get; set; }
         public DbSet<LineaGastoAdministrativo> LineasGastoAdministrativo {get; set; }
 
-
         //Configuracion de mapeo
         protected override void OnModelCreating(DbModelBuilder pModelBuilder)
         {

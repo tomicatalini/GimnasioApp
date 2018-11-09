@@ -84,6 +84,19 @@ namespace CapaNegocio.Controladores
             unSocio.Rutinas.Add(unaRutina);
            // unaRutina.Socios.Add(unSocio);
         }
+
+        public List<Musculo> GetMusulos()
+        {
+            List<Musculo> lista = this.iUnitOfWork.MusculoRepository.GetAll().ToList();
+            return lista;
+        }
+
+        public List<Ejercicio> GetEjercicios()
+        {
+            List<Ejercicio> lista = this.iUnitOfWork.EjercicioRepository.GetAll().ToList();
+            return lista;
+        }
+        
        
     }
 }
