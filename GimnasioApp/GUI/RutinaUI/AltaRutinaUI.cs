@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaNegocio.Controladores;
 
 namespace GimnasioApp.GUI.RutinaUI
 {
@@ -20,73 +21,6 @@ namespace GimnasioApp.GUI.RutinaUI
             AgregarDataGrid();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            AgregarDataGrid();
-        }
-
-        public void AgregarDataGridDias()
-        {
-
-            
-            //flowLayoutPanel1.Controls.Add(dataGrid);
-
-            //this.tableLayoutPanel1.RowCount++;
-            //int row = this.tableLayoutPanel1.RowCount;
-            //this.tableLayoutPanel1.Controls.Add(new DataGridDiaRutina());
-            //this.tableLayoutPanel1.SetRow(new DataGridDiaRutina(), row);
-        }
-
-        private void panelDias_SizeChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void AltaRutinaUI_Resize(object sender, EventArgs e)
-        {
-            //this.dataGridDiaRutina1.Width = Convert.ToInt32(this.flowLayoutPanel1.Width * 0.99) ;
-            //this.dataGridDiaRutina1.Width = this.flowLayoutPanel1.Width - 15;
-        }
-
-        private void dataGridDia_MouseClick(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void dataGridDia_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            var dataGrid = (DataGridView)sender;
-            var columna = dataGrid.Columns[e.ColumnIndex];
-
-            if (columna.Name == "agregar")
-            {
-                if (e.RowIndex >= 0)
-                {
-                    dataGrid.Rows.RemoveAt(e.RowIndex);
-                }
-                else
-                {
-                    dataGrid.Rows.Add();
-                }
-            }
-        }
-
-        private void dataGridDia_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
-        {
-            var dataGrid = (DataGridView)sender;
-            dataGrid.Height += dataGrid.Rows[e.RowIndex].Height;
-        }
-
-        private void dataGridDia_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
-        {
-            //var dataGrid = (DataGridView)sender;
-
-            //if (dataGrid.Rows.Count > 1)
-            //{
-            //    dataGrid.Height -= dataGrid.Rows[e.RowIndex].Height;
-            //}
-        }
-
         public void AgregarDataGrid()
         {
             var nuevoDataGrid = new DataGridDiaRutina();
@@ -95,6 +29,48 @@ namespace GimnasioApp.GUI.RutinaUI
             nuevoDataGrid.Controls["lblTextoDia"].Text = "0"+this.iCantidadDias;
             this.panelContenedor.Controls.Add(nuevoDataGrid);
             nuevoDataGrid.Show();
+        }
+
+        private void btnAgregarDia_Click(object sender, EventArgs e)
+        {
+            AgregarDataGrid();
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            var adminRutina = new ControladorRutina();
+            var btn = (Button)sender;
+            var altaRutinaUI = btn.Parent;
+            var panelContenedor = altaRutinaUI.Controls["panelContenedor"];
+            List<object> listaDias = new List<object>();
+
+            foreach (var control in panelContenedor.Controls)
+            {
+                if (control is DataGridDiaRutina)
+                {
+                    DataGridDiaRutina controlUsuario = (DataGridDiaRutina)control;
+                    var dia = int.Parse(controlUsuario.Controls["lblTextoDia"].Text.Trim());
+                    var nombreDia = controlUsuario.Controls["txtNombreDia"].Text.Trim();
+                    var dataGrid = (DataGridView)controlUsuario.Controls["dataGridDia"];
+
+                    foreach (DataGridViewRow item in dataGrid.Rows)
+                    {
+                        string musculo = item.Cells["musculo"].Value.ToString();
+                        string ejercicio = item.Cells["Ejercicio"].Value.ToString();
+                        string series = item.Cells["serie"].Value.ToString();
+                        string repeticion = item.Cells["repeticion"].Value.ToString();
+                        string observacion = item.Cells["observacion"].Value.ToString();
+                        int descanso = int.Parse(item.Cells["descanso"].Value.ToString());
+
+                        listaDias.Add(adminRutina.ObtenerRutinaDeDataGrid(dia, nombreDia, musculo, ejercicio, series, repeticion, observacion, descanso));
+                    }
+
+                    
+                }
+            }
+
+
+           
         }
     }
 }

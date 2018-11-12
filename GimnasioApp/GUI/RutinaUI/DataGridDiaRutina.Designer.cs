@@ -40,7 +40,7 @@
             this.descanso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.observacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblTextoDia = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNombreDia = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -158,12 +158,12 @@
             this.lblTextoDia.TabIndex = 3;
             this.lblTextoDia.Text = "01";
             // 
-            // textBox1
+            // txtNombreDia
             // 
-            this.textBox1.Location = new System.Drawing.Point(184, 24);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(218, 21);
-            this.textBox1.TabIndex = 4;
+            this.txtNombreDia.Location = new System.Drawing.Point(184, 24);
+            this.txtNombreDia.Name = "txtNombreDia";
+            this.txtNombreDia.Size = new System.Drawing.Size(218, 21);
+            this.txtNombreDia.TabIndex = 4;
             // 
             // label1
             // 
@@ -222,7 +222,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtNombreDia);
             this.Controls.Add(this.lblTextoDia);
             this.Controls.Add(this.dataGridDia);
             this.Controls.Add(this.lblDia);
@@ -241,7 +241,7 @@
         private System.Windows.Forms.Label lblDia;
         private System.Windows.Forms.DataGridView dataGridDia;
         private System.Windows.Forms.Label lblTextoDia;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNombreDia;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewComboBoxColumn musculo;
         private System.Windows.Forms.DataGridViewComboBoxColumn ejercicio;

@@ -7,7 +7,8 @@ namespace CapaDominio.ModuloGimnasio
 
         public int Id { get; set; }
         public int Dia { get; set; }
-        
+        //public string Nombre { get; set; }
+
         public virtual int RutinaId { get; set; }
         public virtual Rutina Rutina { get; set; }
                 

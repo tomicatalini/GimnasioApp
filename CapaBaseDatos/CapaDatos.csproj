@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DTO\ProductoDTO.cs" />
+    <Compile Include="DTO\RutinaDTO.cs" />
     <Compile Include="GimnasioBD.cs" />
     <Compile Include="MapeoBD\ActividadFisicaMap.cs" />
     <Compile Include="MapeoBD\ContactoEmergenciaMap.cs" />
