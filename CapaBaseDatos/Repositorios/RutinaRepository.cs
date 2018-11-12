@@ -13,7 +13,7 @@ namespace CapaBaseDatos.Repositorios
 
         //public IList<Rutina> GetByNombre(string cadena)
         //{
-        //    return this.iDbContext.Rutinas.(unaRutina => unaRutina.Nombre.Contains(cadena));
+        //  return this.iDbContext.Rutinas.(unaRutina => unaRutina.Nombre.Contains(cadena));
         //}
     }
 
