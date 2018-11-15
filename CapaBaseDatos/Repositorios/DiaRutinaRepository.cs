@@ -1,12 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using CapaBaseDatos.Repositorios.InterfacesRepositorios;
+using CapaDominio.ModuloGimnasio;
 
 namespace CapaBaseDatos.Repositorios
 {
-    class DiaRutinaRepository
+    /// <summary>
+    /// Repositorio de entidad dia de la rutina
+    /// </summary>
+    public class DiaRutinaRepository : Repository<DiaRutina, GimnasioBD>, IDiaRutinaRepository
     {
+        public DiaRutinaRepository(GimnasioBD pContext) : base(pContext) { }
+
+        public IList<DiaRutina> GetDiaByNum(int num)
+        {
+            return this.iDbContext.DiasRutina.Where(unDia => unDia.Dia == num);
+        }
     }
 }

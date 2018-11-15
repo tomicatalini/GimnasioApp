@@ -8,6 +8,9 @@ namespace CapaBaseDatos.Repositorios
 {
     class LineaEjercicio
     {
-
+        public IList<LineaEjercicio> GetLineaById(int id)
+        {
+            return this.iDbContext.LineasEjercicio.Where(unaLineaEjercicio => unaLineaEjercicio.Id == id);
+        }
     }
 }
