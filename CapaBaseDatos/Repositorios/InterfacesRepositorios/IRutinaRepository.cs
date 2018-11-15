@@ -1,5 +1,5 @@
-﻿using CapaDominio.ModuloGimnasio;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using CapaDominio.ModuloGimnasio;
 
 namespace CapaBaseDatos.Repositorios.InterfacesRepositorios
 {
@@ -8,7 +8,6 @@ namespace CapaBaseDatos.Repositorios.InterfacesRepositorios
     /// </summary>
     public interface IRutinaRepository : IRepository<Rutina>
     {
-        //agregar metodos de rutina.
-        //IList<Rutina> GetByNombre(string cadena);
+        IList<Rutina> GetByNombre(string cadena);
     }
 }

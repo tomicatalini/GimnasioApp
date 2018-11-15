@@ -1,18 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CapaBaseDatos;
 using CapaDominio.ModuloGimnasio;
-using CapaNegocio;
+using CapaBaseDatos;
 
 namespace CapaNegocio.Controladores
 {
     public class ControladorRutina
     {
+        /// <summary>
+        /// Contexto de base de datos junto con el patron UnitOfWork
+        /// </summary>
         private UnitOfWork iUnitOfWork;
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public ControladorRutina() // constructor del controlador
         {
             this.iUnitOfWork = new UnitOfWork(new GimnasioBD());
@@ -82,7 +84,7 @@ namespace CapaNegocio.Controladores
             var unSocio = this.iUnitOfWork.SocioRepository.Get(socioDni);
 
             unSocio.Rutinas.Add(unaRutina);
-           // unaRutina.Socios.Add(unSocio);
+            unaRutina.Socios.Add(unSocio);
         }
 
         public List<Musculo> GetMusulos()
