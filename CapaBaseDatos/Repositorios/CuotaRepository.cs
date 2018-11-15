@@ -10,5 +10,12 @@ namespace CapaBaseDatos.Repositorios
     {
         public CuotaRepository(GimnasioBD pContext) : base(pContext) { }
 
+        /*public float GetDeuda()
+        {
+            float deuda = 0;
+            deuda += recorrer this.iDbContext.Cuota.Pagos;
+            return deuda
+        }*/
+
     }
 }
